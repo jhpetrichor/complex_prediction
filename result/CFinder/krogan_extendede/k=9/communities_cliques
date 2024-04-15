@@ -1,0 +1,22 @@
+# The contained cliques in the communities at k=9
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/krogan_extended.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+0: 932 1265 1659 2176 2180 2601 1100 1638 1660 1661 1532 2175 2599 1533 2178 2600 2177 
+1: 989 1196 
+2: 1025 1240 2082 2083 
+3: 1028 1601 1786 1602 2041 
+4: 1052 2057 2058 1940 2074 2059 
+5: 1141 1497 
+6: 1336 1337 
+7: 1393 1394 1524 1525 
+8: 1434 
+9: 1534 1535 1537 1538 
+10: 1604 1605 1606 1607 1794 1796 1907 2054 2152 2153 2154 2155 2156 2158 1908 2055 2157 2159 1797 1795 
+11: 1834 
+12: 1942 1943 
+13: 1954 1955 1956 1958 1959 
+14: 2092 2453 

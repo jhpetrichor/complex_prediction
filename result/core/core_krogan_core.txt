@@ -1,0 +1,3176 @@
+Complex 1
+Core: YDL007W YHR200W
+Attachment: YDL036C YDL097C YDL147W YDR363W-A YDR394W YDR427W YEL037C YER021W YFR004W YFR010W YFR052W YGL048C YHR027C YIL075C YKL145W YOR117W YOR259C YOR261C YPR108W
+
+Complex 2
+Core: YER022W YGL127C YOL051W YOR174W YPR070W YPR168W
+Attachment: YBL093C YBR193C YBR253W YDL005C YDR308C YGL025C YGL151W YGR104C YHR041C YHR058C YLR071C YNL236W YNR010W YOL135C
+
+Complex 3
+Core: YDR190C YJL081C YPL235W
+Attachment: YAL011W YBR231C YCR060W YDL002C YDR334W YDR485C YEL044W YER092W YFL013C YGL150C YGR002C YGR086C YLR052W YLR385C YML041C YNL059C YNL215W YOR141C YOR189W YPL129W
+
+Complex 4
+Core: YBL002W YBL003C YBR009C
+Attachment: YAL007C YBR010W YBR060C YCR043C YDL095W YDR044W YDR075W YDR174W YDR224C YER116C YGL035C YGL207W YGL241W YGR275W YHR118C YIL076W YJL047C YJR010C-A YKR048C YLR320W YLR385C YML065W YML069W YMR044W YMR072W YMR284W YNL030W YNL031C YNL088W YNL201C YOL054W YOR217W YPL001W YPR161C
+
+Complex 5
+Core: YIL126W YKR008W YLR033W YLR321C
+Attachment: YCR020W-B YCR052W YDR303C YFR037C YGR056W YGR275W YLR357W YML127W YMR033W YMR091C YPR034W
+
+Complex 6
+Core: YBR198C YGL112C
+Attachment: YBR081C YDR145W YDR167W YGR252W YGR274C YLR055C YML015C YML098W YMR005W YMR223W YMR227C YMR236W YOL148C YPL011C YPL047W YPL254W
+
+Complex 7
+Core: YFR050C YPR103W
+Attachment: YBL041W YER012W YER094C YGL011C YGR135W YGR253C YJL001W YML092C YMR314W YOL038W YOR157C YOR362C
+
+Complex 8
+Core: YER029C YGR074W YLR275W
+Attachment: YBL026W YBR119W YDL043C YDR240C YFL018W-A YGR013W YHR165C YJR022W YKL012W YKL173W YLR147C YLR298C YMR240C YNL092W YOR159C YPL213W YPR057W YPR178W YPR182W
+
+Complex 9
+Core: YDL140C YGL070C YIL021W YOL005C
+Attachment: YBR154C YDL115C YDR404C YGL043W YGR005C YGR063C YGR186W YJL140W YML010W YOR151C YOR210W YPL129W YPR187W
+
+Complex 10
+Core: YDR280W YGR095C YGR158C
+Attachment: YCR035C YDL111C YGR195W YHR069C YHR081W YNL232W YNR024W YOL021C YOL142W YOR001W YOR076C
+
+Complex 11
+Core: YCR009C YDR388W YLR429W
+Attachment: YAL027W YBL071W-A YBR108W YCR008W YCR043C YDL095W YDR314C YDR381W YEL037C YER049W YER116C YFR010W YGL106W YGL252C YGR086C YHR042W YIL039W YIL148W YJL033W YLL022C YLR015W YLR144C YLR218C YML011C YMR229C YNL244C YOL098C YPL022W YPL249C YPR093C YPR161C
+
+Complex 12
+Core: YJR063W YOR340C YOR341W YPR010C
+Attachment: YBR154C YDR156W YHR143W-A YJL148W YNL113W YNL248C YOR210W YPR110C YPR187W
+
+Complex 13
+Core: YKL018W YNL317W
+Attachment: YAL043C YDR195W YDR301W YDR381W YER133W YGL014W YGR156W YHR029C YJR093C YKL059C YKR002W YLR115W YLR277C YNL222W YPR107C
+
+Complex 14
+Core: YDL150W YOR207C
+Attachment: YBR154C YDR045C YJL011C YKR025W YNL113W YNL151C YNR003C YOR116C YOR210W YOR224C YPR110C YPR187W YPR190C
+
+Complex 15
+Core: YDR176W YDR448W
+Attachment: YBR081C YCL010C YDR145W YDR167W YDR392W YGL112C YGR252W YMR223W YOL148C YPL047W YPL254W
+
+Complex 16
+Core: YBR119W YGR013W YIL061C YKL012W
+Attachment: YDL087C YDR235W YDR240C YFL018W-A YGR074W YHR086W YLR275W YLR298C YML046W YPR182W
+
+Complex 17
+Core: YBR251W YDR175C
+Attachment: YDR124W YDR337W YDR347W YER050C YGR165W YHL004W YIL093C YJR096W YJR113C YKL155C YNL137C YNR036C YOR158W
+
+Complex 18
+Core: YEL018W YFL024C YHR090C YJR082C YNL136W YOR244W
+Attachment: YBL003C YDR359C YGR002C YJL081C YNL107W YPR023C
+
+Complex 19
+Core: YDR473C YGR091W
+Attachment: YBR055C YDR378C YER112W YER172C YFL018W-A YHR165C YKL173W YNR011C YOR308C YPR182W
+
+Complex 20
+Core: YLR347C YNL189W
+Attachment: YAR002W YDR289C YGL232W YGR103W YGR180C YHR090C YJR041C YLR197W YLR298C YLR335W YML060W YNL136W YNL139C YOL051W YOR001W YOR124C YPL020C YPL153C YPL178W
+
+Complex 21
+Core: YCR077C YJL124C YLR438C-A
+Attachment: YBL026W YDR378C YEL015W YER112W YER146W YGL173C YNL118C YNL147W
+
+Complex 22
+Core: YBR095C YMR263W YPL181W
+Attachment: YAL013W YIL084C YNL097C YNL330C YOL004W YPL139C
+
+Complex 23
+Core: YGR086C YPL004C
+Attachment: YBR108W YCR008W YDL143W YDR490C YFR019W YGL106W YGL173C YGL252C YKL142W YLR179C YLR429W YMR031C YMR086W YMR309C YNL067W
+
+Complex 24
+Core: YBR107C YBR211C YGR179C YJR135C
+Attachment: YDR254W YDR318W YLR315W YPL018W YPR046W
+
+Complex 25
+Core: YML065W YPR162C
+Attachment: YBL002W YBR060C YDR381W YEL056W YHR118C YLL004W YNL261W YPL001W YPR175W
+
+Complex 26
+Core: YDR324C YDR398W YEL055C YGR128C YHR196W YJL109C YMR093W YPL126W
+Attachment:
+
+Complex 27
+Core: YKR081C YOR294W
+Attachment: YGL213C YGR103W YHR066W YHR118C YJL033W YJL050W YKR024C YMR128W YMR229C YNL110C YNL175C YOR206W YPR045C YPR161C
+
+Complex 28
+Core: YAR003W YBR175W YDR469W YHR119W YLR015W YPL138C
+Attachment: YBR258C YKL018W
+
+Complex 29
+Core: YDR138W YHR167W YML062C YNL139C
+Attachment: YCL011C YJR032W YNL004W YNL140C YOR191W
+
+Complex 30
+Core: YDL043C YML049C YMR240C
+Attachment: YDR381W YDR482C YER029C YGL174W YGR074W YJL203W YLR147C YLR150W YLR275W YMR288W YOR319W
+
+Complex 31
+Core: YDR201W YDR320C-A YKL052C
+Attachment: YDR016C YGL061C YGR113W YKR037C YKR083C
+
+Complex 32
+Core: YGL106W YOR326W
+Attachment: YBR109C YCR008W YDR017C YDR457W YGR188C YKL124W YLR288C YLR319C YMR071C YNL023C YPL040C
+
+Complex 33
+Core: YHL025W YJL176C YOR290C YPL016W
+Attachment: YGR275W YMR033W YNR023W YPR034W
+
+Complex 34
+Core: YLR175W YNL308C
+Attachment: YCL059C YDL014W YDL208W YGL078C YHR089C YLR197W YMR290C YPR161C
+
+Complex 35
+Core: YBR079C YMR309C
+Attachment: YDR429C YER025W YGL106W YLR192C YMR146C YOR052C YOR361C YPR041W
+
+Complex 36
+Core: YLR197W YOR310C
+Attachment: YAL051W YDL014W YER162C YKR092C YLR455W YNL189W YNR054C YOL144W YOR078W YPR178W
+
+Complex 37
+Core: YBL084C YDR118W YGL240W YHR166C YKL022C YLR127C YNL172W
+Attachment:
+
+Complex 38
+Core: YDR211W YGR083C YOR260W
+Attachment: YER025W YJR007W YKR026C YLR291C
+
+Complex 39
+Core: YDL185W YGR020C YHR039C-B YLR090W YPL201C YPR036W
+Attachment: YBR127C
+
+Complex 40
+Core: YDL145C YDR238C YGL137W YIL076W
+Attachment: YFR051C YNL287W YPL010W
+
+Complex 41
+Core: YBR279W YGL244W YOL145C YOR123C
+Attachment: YGL207W YLR418C YML069W
+
+Complex 42
+Core: YBR019C YBR042C YFL034W YFR043C YHL019C YKL135C YLR170C YPL259C YPR029C
+Attachment:
+
+Complex 43
+Core: YEL003W YGR078C YJL179W YLR200W YML094W YNL153C
+Attachment:
+
+Complex 44
+Core: YDL108W YDR311W YDR460W YLR005W YPR025C YPR056W
+Attachment:
+
+Complex 45
+Core: YCR058C YDR449C YJL069C YLR129W YLR222C YLR409C
+Attachment:
+
+Complex 46
+Core: YBL046W YDR075W YNL201C
+Attachment: YBL002W YBL003C YDR225W YDR293C YML010W
+
+Complex 47
+Core: YBR257W YNL221C
+Attachment: YAL033W YBR167C YDR478W YHR062C YIR015W
+
+Complex 48
+Core: YGL213C YKL023W YLR398C
+Attachment: YDL014W YDR153C YDR381W YGL173C YLR150W YOR294W YPR189W
+
+Complex 49
+Core: YLL036C YLR117C
+Attachment: YBR188C YDR416W YDR482C YGR278W YPL151C YPR101W
+
+Complex 50
+Core: YDL092W YKL122C YPL243W
+Attachment: YDL051W YML105C YPL210C YPR088C
+
+Complex 51
+Core: YDR477W YER129W YGL115W
+Attachment: YDR419W YDR422C YER027C
+
+Complex 52
+Core: YGR285C YHR064C
+Attachment: YDR234W YDR457W YFL007W YFL013C YLR262C YNL209W YOR081C
+
+Complex 53
+Core: YMR186W YPL240C
+Attachment: YBR065C YDR168W YGR123C YJR121W YLR216C YOL013C YOR027W
+
+Complex 54
+Core: YDL216C YDR179C YDR328C YIL071C YOL117W
+Attachment: YDL147W
+
+Complex 55
+Core: YGR200C YHR187W YLR384C YPL086C YPL101W
+Attachment:
+
+Complex 56
+Core: YCL014W YOR081C
+Attachment: YDR099W YFR053C YGL245W YHR064C YKR048C YLR058C YNL209W
+
+Complex 57
+Core: YBR234C YDL029W YJR065C YKL013C YLR370C
+Attachment: YEL037C
+
+Complex 58
+Core: YCR071C YDR405W
+Attachment: YDR322W YLR439W YMR024W YNL284C YPL173W
+
+Complex 59
+Core: YAL001C YBR123C YDR362C YGR047C YOR110W
+Attachment:
+
+Complex 60
+Core: YAL007C YGL200C YML012W
+Attachment: YAR002C-A YBR009C YDR174W YDR381W YLR150W
+
+Complex 61
+Core: YBL097W YDR325W YFR031C YLR086W YLR272C
+Attachment:
+
+Complex 62
+Core: YHR012W YJL053W YJL154C YOR132W
+Attachment: YOR069W
+
+Complex 63
+Core: YBR103W YCR033W YIL112W YKR029C
+Attachment: YOL068C
+
+Complex 64
+Core: YAL016W YGL190C
+Attachment: YDL134C YDL188C YML109W YOR162C
+
+Complex 65
+Core: YBR105C YGL227W YIL017C YIL097W YMR135C
+Attachment:
+
+Complex 66
+Core: YBL058W YDL126C
+Attachment: YDR295C YLR377C YML064C YNL155W YPR168W
+
+Complex 67
+Core: YBR140C YDR192C YDR396W YDR498C YJL056C YKL037W YML058W YNL291C YNL310C YOR346W
+Attachment:
+
+Complex 68
+Core: YJL050W YOL115W
+Attachment: YCR035C YDL175C YDR381W YGL120C YIL079C
+
+Complex 69
+Core: YIL103W YKL191W
+Attachment: YBL071W-A YDR385W YER001W YLR043C
+
+Complex 70
+Core: YCR002C YDL225W YHR107C YJR076C
+Attachment: YDR168W
+
+Complex 71
+Core: YGL049C YGR162W YOL139C
+Attachment: YDL014W YJL138C YKL204W YML017W
+
+Complex 72
+Core: YJR041C YKL214C YMR125W YPL178W
+Attachment: YNL189W
+
+Complex 73
+Core: YBR087W YJR068W YNL290W YOR144C YOR217W
+Attachment:
+
+Complex 74
+Core: YBR160W YDL155W YLR079W
+Attachment: YBR135W YGR086C YPR120C
+
+Complex 75
+Core: YAL034W-A YIR010W YJR112W YPL233W
+Attachment:
+
+Complex 76
+Core: YML071C YPR105C
+Attachment: YER157W YGR120C YNL051W
+
+Complex 77
+Core: YDR385W YOR133W
+Attachment: YHL014C YIR007W YJL062W-A YOL013C
+
+Complex 78
+Core: YDR252W YGR134W YJR011C
+Attachment: YAL021C YHR193C
+
+Complex 79
+Core: YJL052W YJR009C
+Attachment: YEL023C YER086W YLR144C YOL013C
+
+Complex 80
+Core: YBR189W YLR075W
+Attachment: YDL182W YGL167C YIL043C YJR010C-A YPR161C
+
+Complex 81
+Core: YKL206C
+Attachment: YBR173C YER012W YLR199C YMR314W
+
+Complex 82
+Core: YBR126C YDR074W YML100W YMR261C
+Attachment:
+
+Complex 83
+Core: YDL105W YDR288W YEL019C YOL034W
+Attachment:
+
+Complex 84
+Core: YDL045W-A
+Attachment: YIL070C YIL093C YJL063C YJR113C
+
+Complex 85
+Core: YKL172W YPL146C
+Attachment: YAL051W YGR090W YNL110C YPR161C
+
+Complex 86
+Core: YIL115C YJL041W YJL061W YKR082W
+Attachment:
+
+Complex 87
+Core: YGL008C YNL055C
+Attachment: YAL007C YBR159W YDL095W YGL167C
+
+Complex 88
+Core: YDL040C YHR013C YOR253W
+Attachment: YDL014W YDR303C YDR381W
+
+Complex 89
+Core: YDR322W YDR462W YNL005C YNL252C
+Attachment:
+
+Complex 90
+Core: YAR007C YHR164C YJL173C YNL312W
+Attachment:
+
+Complex 91
+Core: YGR103W YMR049C
+Attachment: YDL014W YDL208W YOR272W
+
+Complex 92
+Core: YER151C YMR173W YOL109W
+Attachment: YDR363W-A YGL106W YLR150W
+
+Complex 93
+Core: YDR099W YER177W YNR047W
+Attachment: YDR001C YGR097W
+
+Complex 94
+Core: YIL105C YNL106C
+Attachment: YAL027W YDR440W YKL126W YPR161C
+
+Complex 95
+Core: Q0110 YFL026W YGR037C YLL019C YLR359W YOL152W
+Attachment:
+
+Complex 96
+Core: YMR172W
+Attachment: YGL019W YOR039W YOR061W
+
+Complex 97
+Core: YAR073W YHR216W YLR432W YML056C
+Attachment:
+
+Complex 98
+Core: YKL078W YNL186W
+Attachment: YGR090W YGR251W YLR175W
+
+Complex 99
+Core: YIL144W YMR117C YOL069W
+Attachment: YER018C
+
+Complex 100
+Core: YNL110C YNR053C
+Attachment: YER006W YLR150W YOR294W YPL093W
+
+Complex 101
+Core: YBR278W YDR121W YNL262W YPR175W
+Attachment:
+
+Complex 102
+Core: YGL242C YKL129C YMR109W
+Attachment: YBR109C
+
+Complex 103
+Core: YDL003W YIL026C YJL074C
+Attachment: YFL008W
+
+Complex 104
+Core: YFR015C YKR058W YLR258W
+Attachment: YJL137C
+
+Complex 105
+Core: Q0250 YDL137W YDR018C YDR374C YIL051C YIL147C
+Attachment:
+
+Complex 106
+Core: YOR078W YPR137W
+Attachment: YOR310C YPR178W
+
+Complex 107
+Core: YGL079W YLR408C
+Attachment: YEL005C YKL061W
+
+Complex 108
+Core: YMR188C
+Attachment: YDR124W YGR084C YGR215W YNR036C
+
+Complex 109
+Core: YDR246W YDR472W YOR115C
+Attachment: YDR108W
+
+Complex 110
+Core: YGL005C YGL223C
+Attachment: YNL041C YNL051W
+
+Complex 111
+Core: YGL133W YJL065C YOR304W
+Attachment: YBR245C
+
+Complex 112
+Core: YCL008C YGR206W YLR119W YPL065W
+Attachment:
+
+Complex 113
+Core: YBR195C YFL041W YML102W YPR018W
+Attachment:
+
+Complex 114
+Core: YCR081W YDR443C
+Attachment: YDR308C YPL042C
+
+Complex 115
+Core: YDL100C YDR451C YER083C YGL020C
+Attachment:
+
+Complex 116
+Core: YKL056C YKL081W YPL048W
+Attachment: YFL013C
+
+Complex 117
+Core: YAL042W
+Attachment: YDL097C YDL147W YFR052W
+
+Complex 118
+Core: YGL095C
+Attachment: YDL097C YER021W YFR052W
+
+Complex 119
+Core: YNL132W
+Attachment: YDL182W YDR299W YGR084C YJL033W YNR054C
+
+Complex 120
+Core: YBL054W
+Attachment: YDL147W YDR363W-A YFR010W
+
+Complex 121
+Core: YJR106W YKR036C YML008C YMR228W YPR186C
+Attachment:
+
+Complex 122
+Core: YLR358C
+Attachment: YAL043C YGR156W YNL222W
+
+Complex 123
+Core: YCR060W YHR034C
+Attachment: YDR190C YMR309C
+
+Complex 124
+Core: YDR049W YKL204W
+Attachment: YDL126C YOL139C
+
+Complex 125
+Core: YGR145W
+Attachment: YDR299W YDR365C YNR054C
+
+Complex 126
+Core: YBR180W YGL140C YJR103W YKL117W YOR262W
+Attachment:
+
+Complex 127
+Core: YJL138C YNL250W
+Attachment: YEL030W YLR249W
+
+Complex 128
+Core: YDR279W YLR154C YNL072W
+Attachment:
+
+Complex 129
+Core: YCR020C-A YEL053C YPR051W
+Attachment:
+
+Complex 130
+Core: YGR272C YNL255C
+Attachment: YDL014W YHL034C
+
+Complex 131
+Core: YJL087C YJR004C YJR124C YPL141C
+Attachment:
+
+Complex 132
+Core: YBR152W YDL098C YGR075C
+Attachment:
+
+Complex 133
+Core: YHR085W YHR197W YNL182C
+Attachment:
+
+Complex 134
+Core: YBL021C YGL237C YOR358W
+Attachment:
+
+Complex 135
+Core: YDL093W YDR139C YOR100C YOR216C
+Attachment:
+
+Complex 136
+Core: YDR069C YEL041W YJR001W YOR177C
+Attachment:
+
+Complex 137
+Core: YJL184W YKR038C YML036W
+Attachment:
+
+Complex 138
+Core: YBR225W YGL197W YLR310C
+Attachment:
+
+Complex 139
+Core: YFR030W YHR185C
+Attachment: YDR304C YDR381W YDR388W
+
+Complex 140
+Core: YBR137W YOL111C YOR007C
+Attachment:
+
+Complex 141
+Core: YCL016C YHR191C YMR078C
+Attachment:
+
+Complex 142
+Core: YCL029C YDR466W YER139C YMR134W
+Attachment:
+
+Complex 143
+Core: YAR071W YBR093C YCR038C YFR055W
+Attachment:
+
+Complex 144
+Core: YKR062W
+Attachment: YDL182W YDL188C YKL028W
+
+Complex 145
+Core: YDR489W YJL072C YOL146W
+Attachment:
+
+Complex 146
+Core: YDR092W YGL087C
+Attachment: YMR140W
+
+Complex 147
+Core: YCR065W YJR102C YPL002C
+Attachment:
+
+Complex 148
+Core: YGR261C YJL024C YPL195W
+Attachment:
+
+Complex 149
+Core: YDR091C YJR067C YNL260C
+Attachment:
+
+Complex 150
+Core: YDR111C
+Attachment: YDR087C YEL030W YER147C
+
+Complex 151
+Core: YCR066W YGL058W YML101C YMR100W
+Attachment:
+
+Complex 152
+Core: YDL153C YIL091C YJR119C
+Attachment:
+
+Complex 153
+Core: YLR028C YMR120C YNR034W
+Attachment:
+
+Complex 154
+Core: YBR136W YHR114W YOR181W
+Attachment:
+
+Complex 155
+Core: YER111C YLR182W YOR083W
+Attachment:
+
+Complex 156
+Core: YLR270W YOR173W YPL245W
+Attachment:
+
+Complex 157
+Core: YIR022W YML055W
+Attachment: YJR010C-A YML012W
+
+Complex 158
+Core: YBR044C YBR291C
+Attachment: YJR010C-A YLR435W
+
+Complex 159
+Core: YJL006C YKL139W YML112W
+Attachment: YDR381W
+
+Complex 160
+Core: YBR023C YDR034C YHR077C YML052W
+Attachment:
+
+Complex 161
+Core: YDL116W YGL092W YGL100W YKL057C
+Attachment:
+
+Complex 162
+Core: YBL038W YKR006C YML025C
+Attachment:
+
+Complex 163
+Core: YDR310C YOR279C
+Attachment: YOL068C
+
+Complex 164
+Core: YCR093W YNL288W
+Attachment: YAL021C
+
+Complex 165
+Core: YDR295C YNL021W YPR179C
+Attachment:
+
+Complex 166
+Core: YGL172W YGR119C
+Attachment: YJL041W
+
+Complex 167
+Core: YML072C YPL249C-A
+Attachment: YIL043C YJR010C-A
+
+Complex 168
+Core: YLR330W YMR237W YNL045W
+Attachment:
+
+Complex 169
+Core: YDR289C YGL246C YOR048C
+Attachment:
+
+Complex 170
+Core: YDL013W YDR320C
+Attachment: YDL147W YPR045C
+
+Complex 171
+Core: YIL033C YJL164C YPL203W
+Attachment:
+
+Complex 172
+Core: YDR227W YLR278C YLR442C
+Attachment:
+
+Complex 173
+Core: YHR124W
+Attachment: YGR048W YIL156W YPR117W
+
+Complex 174
+Core: YHR076W YMR079W YPR171W
+Attachment:
+
+Complex 175
+Core: YFR024C YMR259C YOR042W
+Attachment:
+
+Complex 176
+Core: YJR084W YPR045C
+Attachment: YDR363W-A YDR381W
+
+Complex 177
+Core: YBL090W
+Attachment: YIL070C YIL093C YJL063C
+
+Complex 178
+Core: YLR423C YPL166W
+Attachment: YPR049C
+
+Complex 179
+Core: YDL139C YDR172W YML005W YOL011W
+Attachment:
+
+Complex 180
+Core: YJL023C YML091C YPR116W
+Attachment:
+
+Complex 181
+Core: YGR006W
+Attachment: YDR318W YPR046W
+
+Complex 182
+Core: YGR283C
+Attachment: YHR089C YMR310C
+
+Complex 183
+Core: YER069W YLR325C
+Attachment: YHR121W YLR147C
+
+Complex 184
+Core: YOR097C
+Attachment: YGL245W YLR147C YOR159C
+
+Complex 185
+Core: YER125W YOR124C YOR138C
+Attachment:
+
+Complex 186
+Core: YDR101C YJL122W
+Attachment: YMR308C
+
+Complex 187
+Core: YLR095C
+Attachment: YBR245C YMR044W
+
+Complex 188
+Core: YGR250C YGR281W YML002W YML051W
+Attachment:
+
+Complex 189
+Core: YBL008W
+Attachment: YBR215W YJL115W
+
+Complex 190
+Core: YOR038C
+Attachment: YBR215W YJL115W
+
+Complex 191
+Core: YGL128C
+Attachment: YGL120C YLR424W
+
+Complex 192
+Core: YDR148C YIL125W
+Attachment: YJL050W
+
+Complex 193
+Core: YDR314C YOR195W
+Attachment: YDR388W YGL014W
+
+Complex 194
+Core: YER110C YNL122C
+Attachment: YHR066W
+
+Complex 195
+Core: YFR003C YKL193C
+Attachment: YER133W
+
+Complex 196
+Core: YDR005C
+Attachment: YKR025W YNL151C
+
+Complex 197
+Core: YBR176W YDL236W YOL072W YPR080W
+Attachment:
+
+Complex 198
+Core: YHR072W-A
+Attachment: YDL208W YGL078C
+
+Complex 199
+Core: YCR084C YKL213C
+Attachment: YDL126C
+
+Complex 200
+Core: YLR231C
+Attachment: YFR053C YLR043C YMR083W
+
+Complex 201
+Core: YBR185C YCL032W
+Attachment: YPR175W
+
+Complex 202
+Core: YDL085C-A
+Attachment: YER172C YHR165C
+
+Complex 203
+Core: YDL179W
+Attachment: YGR275W YLR357W
+
+Complex 204
+Core: YBL060W
+Attachment: YBR159W YJL047C YMR214W
+
+Complex 205
+Core: YGL096W
+Attachment: YBR173C YER012W
+
+Complex 206
+Core: YKL190W YLR433C
+Attachment: YBR109C
+
+Complex 207
+Core: YGR202C YOR098C
+Attachment: YNL189W
+
+Complex 208
+Core: YEL023C YOR368W
+Attachment: YJR009C
+
+Complex 209
+Core: YHR065C
+Attachment: YDR365C YNR054C
+
+Complex 210
+Core: YBR186W YGL006W YHR104W
+Attachment:
+
+Complex 211
+Core: YIL169C YOR334W YPR151C
+Attachment:
+
+Complex 212
+Core: YDR267C YHR122W YIL128W
+Attachment:
+
+Complex 213
+Core: YGL111W YNL082W YOR380W
+Attachment:
+
+Complex 214
+Core: YLR447C YOR112W YOR270C
+Attachment:
+
+Complex 215
+Core: YGL130W YHR130C YPL228W
+Attachment:
+
+Complex 216
+Core: YBR268W YDL202W YNL185C
+Attachment:
+
+Complex 217
+Core: YBL014C YJL025W YML043C
+Attachment:
+
+Complex 218
+Core: YDR147W YHR087W YIL162W
+Attachment:
+
+Complex 219
+Core: YCL004W YOL028C YPR054W
+Attachment:
+
+Complex 220
+Core: YGL044C YMR061W YOR250C
+Attachment:
+
+Complex 221
+Core: YER007C-A YJR014W YOR028C
+Attachment:
+
+Complex 222
+Core: YEL021W YMR074C YNL256W
+Attachment:
+
+Complex 223
+Core: YER153C YKR103W YNL274C
+Attachment:
+
+Complex 224
+Core: YOR054C
+Attachment: YIL035C YKL088W
+
+Complex 225
+Core: YNR037C
+Attachment: YKL155C YNR036C YOR158W
+
+Complex 226
+Core: YBR026C YDR054C
+Attachment: YIL148W
+
+Complex 227
+Core: YBL032W YGL105W
+Attachment: YGL245W
+
+Complex 228
+Core: YGR081C YMR308C
+Attachment: YBR010W
+
+Complex 229
+Core: YDR519W
+Attachment: YGL014W YOL088C YOR261C
+
+Complex 230
+Core: YDR507C YMR139W
+Attachment: YKR048C
+
+Complex 231
+Core: YGL073W YJL194W YLR419W
+Attachment:
+
+Complex 232
+Core: YJL118W YKL093W YLR273C
+Attachment:
+
+Complex 233
+Core: YLR287C YML029W YNL294C
+Attachment:
+
+Complex 234
+Core: YGL013C YMR297W YOR137C
+Attachment:
+
+Complex 235
+Core: YJL107C YJR091C YOR265W
+Attachment:
+
+Complex 236
+Core: YJL144W YMR012W YNL234W
+Attachment:
+
+Complex 237
+Core: YDL195W YDR164C YLR208W
+Attachment:
+
+Complex 238
+Core: YDR233C YJL146W YPL154C
+Attachment:
+
+Complex 239
+Core: YDL099W YDR517W YIL109C
+Attachment:
+
+Complex 240
+Core: YML014W YNR046W YOL124C
+Attachment:
+
+Complex 241
+Core: YLR143W YMR169C YMR170C
+Attachment:
+
+Complex 242
+Core: YHR182W YNL037C YOR136W
+Attachment:
+
+Complex 243
+Core: YBR131W YGL124C YML007W
+Attachment:
+
+Complex 244
+Core: YDL141W
+Attachment: YDR087C YEL026W YMR239C
+
+Complex 245
+Core: YHR127W YOR213C
+Attachment: YDR381W YOR294W
+
+Complex 246
+Core: YPL082C
+Attachment: YDL097C YFR052W
+
+Complex 247
+Core: YIL036W YIL150C
+Attachment: YDR174W
+
+Complex 248
+Core: YJL155C YLR345W YOR219C
+Attachment:
+
+Complex 249
+Core: YFR032C YKL058W YOR194C
+Attachment:
+
+Complex 250
+Core: YBR017C YLR426W YOR374W
+Attachment:
+
+Complex 251
+Core: YER060W YFL002C YMR097C
+Attachment:
+
+Complex 252
+Core: YER088C YNL091W YOL159C-A
+Attachment:
+
+Complex 253
+Core: YBR082C YDR059C YER068W
+Attachment:
+
+Complex 254
+Core: YDR474C YDR475C YOR289W
+Attachment:
+
+Complex 255
+Core: YMR276W YNL268W YPR002W
+Attachment:
+
+Complex 256
+Core: YLR221C YOL144W
+Attachment: YDL014W
+
+Complex 257
+Core: YDR058C YML106W YMR271C
+Attachment:
+
+Complex 258
+Core: YDL102W YJR006W YJR043C
+Attachment:
+
+Complex 259
+Core: YGL009C YGR171C YPL028W
+Attachment:
+
+Complex 260
+Core: YIL094C YKR003W YPR061C
+Attachment:
+
+Complex 261
+Core: YMR192W YPL249C
+Attachment: YDR388W
+
+Complex 262
+Core: YNL112W
+Attachment: YGL014W YKL028W YNL209W
+
+Complex 263
+Core: YEL039C YLR021W YPL144W
+Attachment:
+
+Complex 264
+Core: YJL207C
+Attachment: YDL019C YER021W YJL148W
+
+Complex 265
+Core: YEL050C YKR085C YMR193W
+Attachment:
+
+Complex 266
+Core: YER064C YGL039W YMR068W
+Attachment:
+
+Complex 267
+Core: YER184C YGR238C YHR158C
+Attachment:
+
+Complex 268
+Core: YCL057W YJR036C YNL307C
+Attachment:
+
+Complex 269
+Core: YLL002W YMR020W YNL246W
+Attachment:
+
+Complex 270
+Core: YKL007W YOL065C YOR236W
+Attachment:
+
+Complex 271
+Core: YFR013W
+Attachment: YBR245C YDL053C YDR174W
+
+Complex 272
+Core: YBL044W YER179W YMR224C
+Attachment:
+
+Complex 273
+Core: YGR207C YLR265C YNR058W
+Attachment:
+
+Complex 274
+Core: YDL006W YDR162C YJL128C
+Attachment:
+
+Complex 275
+Core: YDR357C
+Attachment: YEL005C YKL061W
+
+Complex 276
+Core: YBL111C YIL069C YOR328W
+Attachment:
+
+Complex 277
+Core: YDR248C YDR304C YHR097C
+Attachment:
+
+Complex 278
+Core: YGL062W
+Attachment: YBR218C YDR523C
+
+Complex 279
+Core: YIL149C YPR144C YPR163C
+Attachment:
+
+Complex 280
+Core: YGR155W YHR007C YML076C
+Attachment:
+
+Complex 281
+Core: YKL210W YLR084C YOR184W
+Attachment:
+
+Complex 282
+Core: YDR470C YML131W YOR092W
+Attachment:
+
+Complex 283
+Core: YPL191C
+Attachment: YGR180C YOR057W
+
+Complex 284
+Core: YOR304C-A
+Attachment: YGL061C YLR319C
+
+Complex 285
+Core: YCR047C
+Attachment: YBR049C YMR128W
+
+Complex 286
+Core: YBR187W YPL217C
+Attachment: YDR381W
+
+Complex 287
+Core: YLR089C
+Attachment: YIL107C YLR259C
+
+Complex 288
+Core: YPL247C
+Attachment: YLR259C YMR108W
+
+Complex 289
+Core: YER032W
+Attachment: YDL134C YLR144C
+
+Complex 290
+Core: YFL016C
+Attachment: YER147C YFR019W
+
+Complex 291
+Core: YDL065C
+Attachment: YER148W YMR108W
+
+Complex 292
+Core: YGR087C
+Attachment: YDR044W YLR199C
+
+Complex 293
+Core: YNL208W
+Attachment: YGL252C YLR277C
+
+Complex 294
+Core: YOR287C
+Attachment: YKR059W YPR178W
+
+Complex 295
+Core: YJR148W
+Attachment: YDR171W YLR418C
+
+Complex 296
+Core: YIL142W
+Attachment: YDL143W YDR365C
+
+Complex 297
+Core: YIR024C
+Attachment: YHR143W-A YNL248C
+
+Complex 298
+Core: YBL019W
+Attachment: YCR020W-B YCR028C-A
+
+Complex 299
+Core: YKL203C
+Attachment: YDL134C YFR052W
+
+Complex 300
+Core: YIL038C
+Attachment: YIL148W YJR032W
+
+Complex 301
+Core: YHR121W YJL051W YLL032C
+Attachment:
+
+Complex 302
+Core: YDR180W
+Attachment: YDL097C YER147C
+
+Complex 303
+Core: YGL251C
+Attachment: YDL134C YLR249W
+
+Complex 304
+Core: YNR038W
+Attachment: YDL014W YLR196W
+
+Complex 305
+Core: YDR287W YNL035C
+Attachment:
+
+Complex 306
+Core: YGL155W YKL019W
+Attachment:
+
+Complex 307
+Core: YLR194C YNL050C
+Attachment:
+
+Complex 308
+Core: YAL044C YLR239C
+Attachment:
+
+Complex 309
+Core: YER081W YIL074C
+Attachment:
+
+Complex 310
+Core: YDR226W YER078C
+Attachment:
+
+Complex 311
+Core: YBL078C YLR295C
+Attachment:
+
+Complex 312
+Core: YMR105C YOR090C
+Attachment:
+
+Complex 313
+Core: YGR277C YPL060W
+Attachment:
+
+Complex 314
+Core: YGR021W YLR269C
+Attachment:
+
+Complex 315
+Core: YKL074C YLR116W
+Attachment:
+
+Complex 316
+Core: YBL005W YBR149W
+Attachment:
+
+Complex 317
+Core: YMR064W YMR098C
+Attachment:
+
+Complex 318
+Core: YER067W YGR228W
+Attachment:
+
+Complex 319
+Core: YJL082W YMR029C
+Attachment:
+
+Complex 320
+Core: YGR142W YMR144W
+Attachment:
+
+Complex 321
+Core: YDR532C YGL093W
+Attachment:
+
+Complex 322
+Core: YAL060W YAL061W
+Attachment:
+
+Complex 323
+Core: YDL008W YER047C
+Attachment:
+
+Complex 324
+Core: YMR200W YOR021C
+Attachment:
+
+Complex 325
+Core: YGR010W YLR328W
+Attachment:
+
+Complex 326
+Core: YDR263C YMR291W
+Attachment:
+
+Complex 327
+Core: YDR313C YLR083C
+Attachment:
+
+Complex 328
+Core: YBR260C YGR196C
+Attachment:
+
+Complex 329
+Core: YJL217W YPR118W
+Attachment:
+
+Complex 330
+Core: YDR353W YHR106W
+Attachment:
+
+Complex 331
+Core: YDR142C YJR012C
+Attachment:
+
+Complex 332
+Core: YBR045C YGL057C
+Attachment:
+
+Complex 333
+Core: YCR102C YNL134C
+Attachment:
+
+Complex 334
+Core: YDR170C YHR201C
+Attachment:
+
+Complex 335
+Core: YLR057W YMR289W
+Attachment:
+
+Complex 336
+Core: YDR079C-A YPL122C
+Attachment:
+
+Complex 337
+Core: YGL086W YJL030W
+Attachment:
+
+Complex 338
+Core: YDR372C YLR149C
+Attachment:
+
+Complex 339
+Core: YGL110C YKR023W
+Attachment:
+
+Complex 340
+Core: YBR098W YDR386W
+Attachment:
+
+Complex 341
+Core: YDR390C YPR180W
+Attachment:
+
+Complex 342
+Core: YDR397C YER159C
+Attachment:
+
+Complex 343
+Core: YCL045C YLR312C
+Attachment:
+
+Complex 344
+Core: YFL018C YFR049W
+Attachment:
+
+Complex 345
+Core: YBR194W YPR152C
+Attachment:
+
+Complex 346
+Core: YDR425W YJL036W
+Attachment:
+
+Complex 347
+Core: YGL164C YOR185C
+Attachment:
+
+Complex 348
+Core: YLR373C YPL128C
+Attachment:
+
+Complex 349
+Core: YHR011W YNL292W
+Attachment:
+
+Complex 350
+Core: YFL021W YPL190C
+Attachment:
+
+Complex 351
+Core: YGR244C YOR142W
+Attachment:
+
+Complex 352
+Core: YNL238W YOL031C
+Attachment:
+
+Complex 353
+Core: YMR207C YNR016C
+Attachment:
+
+Complex 354
+Core: YDR123C YOL108C
+Attachment:
+
+Complex 355
+Core: YDR098C YGL220W
+Attachment:
+
+Complex 356
+Core: YNL098C YOR101W
+Attachment:
+
+Complex 357
+Core: YKR014C YMR258C
+Attachment:
+
+Complex 358
+Core: YDR486C YLR181C
+Attachment:
+
+Complex 359
+Core: YDR189W YLR026C
+Attachment:
+
+Complex 360
+Core: YER007W YOR349W
+Attachment:
+
+Complex 361
+Core: YDL234C YIL078W
+Attachment:
+
+Complex 362
+Core: YDR322C-A YOR335C
+Attachment:
+
+Complex 363
+Core: YBR066C YKR015C
+Attachment:
+
+Complex 364
+Core: YKL215C YPL199C
+Attachment:
+
+Complex 365
+Core: YKL182W YPL231W
+Attachment:
+
+Complex 366
+Core: YDR266C YPR114W
+Attachment:
+
+Complex 367
+Core: YOL076W YPR131C
+Attachment:
+
+Complex 368
+Core: YLR146C YPR069C
+Attachment:
+
+Complex 369
+Core: YIL127C YJR105W
+Attachment:
+
+Complex 370
+Core: YIL135C YOR043W
+Attachment:
+
+Complex 371
+Core: YPL161C YPR198W
+Attachment:
+
+Complex 372
+Core: YJR052W YPL046C
+Attachment:
+
+Complex 373
+Core: YGR256W YHR183W
+Attachment:
+
+Complex 374
+Core: YJR109C YOR303W
+Attachment:
+
+Complex 375
+Core: YHR156C YOR238W
+Attachment:
+
+Complex 376
+Core: YKL041W YLR025W
+Attachment:
+
+Complex 377
+Core: YGR211W YOR009W
+Attachment:
+
+Complex 378
+Core: YDL069C YKL164C
+Attachment:
+
+Complex 379
+Core: YDR157W YKR049C
+Attachment:
+
+Complex 380
+Core: YKR071C YPR048W
+Attachment:
+
+Complex 381
+Core: YGL180W YKR098C
+Attachment:
+
+Complex 382
+Core: YLR035C YMR167W
+Attachment:
+
+Complex 383
+Core: YKL112W YLR082C
+Attachment:
+
+Complex 384
+Core: YNL220W YOR187W
+Attachment:
+
+Complex 385
+Core: YHR024C YLR163C
+Attachment:
+
+Complex 386
+Core: YLR113W YLR248W
+Attachment:
+
+Complex 387
+Core: YCR095C YHL029C
+Attachment:
+
+Complex 388
+Core: YDL173W YLR382C
+Attachment:
+
+Complex 389
+Core: YBR248C YLR401C
+Attachment:
+
+Complex 390
+Core: Q0050 YPR140W
+Attachment:
+
+Complex 391
+Core: YMR043W YNL042W
+Attachment:
+
+Complex 392
+Core: YGR248W YOR018W
+Attachment:
+
+Complex 393
+Core: YLR178C YMR257C
+Attachment:
+
+Complex 394
+Core: YGL131C YIL101C
+Attachment:
+
+Complex 395
+Core: YGR170W YNL264C
+Attachment:
+
+Complex 396
+Core: YGL187C YNL052W
+Attachment:
+
+Complex 397
+Core: YER178W YNL071W
+Attachment:
+
+Complex 398
+Core: YLR375W YML059C
+Attachment:
+
+Complex 399
+Core: YNL104C YOR108W
+Attachment:
+
+Complex 400
+Core: YBR030W YLR244C
+Attachment:
+
+Complex 401
+Core: YDR213W YML111W
+Attachment:
+
+Complex 402
+Core: YDL241W YKL157W
+Attachment:
+
+Complex 403
+Core: YKL143W YPL239W
+Attachment:
+
+Complex 404
+Core: YGL125W YPL023C
+Attachment:
+
+Complex 405
+Core: YAR019C YDL220C
+Attachment:
+
+Complex 406
+Core: YBR057C YLL040C
+Attachment:
+
+Complex 407
+Core: YBL039C YGL022W
+Attachment:
+
+Complex 408
+Core: YBL045C YPR191W
+Attachment:
+
+Complex 409
+Core: YBL047C YCR030C
+Attachment:
+
+Complex 410
+Core: YBL056W YLR240W
+Attachment:
+
+Complex 411
+Core: YDR346C YPL111W
+Attachment:
+
+Complex 412
+Core: YER090W YKL211C
+Attachment:
+
+Complex 413
+Core: YDR453C YML028W
+Attachment:
+
+Complex 414
+Core: YDR424C YDR488C
+Attachment:
+
+Complex 415
+Core: YCR032W YOL057W
+Attachment:
+
+Complex 416
+Core: YDL044C YLR139C
+Attachment:
+
+Complex 417
+Core: YBR034C YEL016C
+Attachment:
+
+Complex 418
+Core: YBL103C YOL067C
+Attachment:
+
+Complex 419
+Core: YAL059W YMR124W
+Attachment:
+
+Complex 420
+Core: YDR533C YMR322C
+Attachment:
+
+Complex 421
+Core: YDL054C YOR315W
+Attachment:
+
+Complex 422
+Core: YDR141C YNL297C
+Attachment:
+
+Complex 423
+Core: YGR130C YGR177C
+Attachment:
+
+Complex 424
+Core: YIL152W YJR092W
+Attachment:
+
+Complex 425
+Core: YLR048W YPR035W
+Attachment:
+
+Complex 426
+Core: YJL070C YML035C
+Attachment:
+
+Complex 427
+Core: YMR010W YOR233W
+Attachment:
+
+Complex 428
+Core: YKR054C YPL263C
+Attachment:
+
+Complex 429
+Core: YNL325C YOR336W
+Attachment:
+
+Complex 430
+Core: YHR084W YPL049C
+Attachment:
+
+Complex 431
+Core: YDL077C YOR051C
+Attachment:
+
+Complex 432
+Core: YDR272W YEL040W
+Attachment:
+
+Complex 433
+Core: YDR181C YMR127C
+Attachment:
+
+Complex 434
+Core: YNL019C YOR168W
+Attachment:
+
+Complex 435
+Core: YDR354W YER065C
+Attachment:
+
+Complex 436
+Core: YIL034C YLR171W
+Attachment:
+
+Complex 437
+Core: YHR172W YLR212C
+Attachment:
+
+Complex 438
+Core: YOR252W YPR047W
+Attachment:
+
+Complex 439
+Core: YLR292C YOR254C
+Attachment:
+
+Complex 440
+Core: YBR101C YBR115C
+Attachment:
+
+Complex 441
+Core: YCL063W YDR499W
+Attachment:
+
+Complex 442
+Core: YLL001W YOR014W
+Attachment:
+
+Complex 443
+Core: YML031W YPL177C
+Attachment:
+
+Complex 444
+Core: YLR452C YNL327W
+Attachment:
+
+Complex 445
+Core: YGR043C YLR354C
+Attachment:
+
+Complex 446
+Core: YLR454W YPL180W
+Attachment:
+
+Complex 447
+Core: YJR053W
+Attachment: YML064C
+
+Complex 448
+Core: YCR042C YPR065W
+Attachment:
+
+Complex 449
+Core: YDL130W-A YDL181W
+Attachment:
+
+Complex 450
+Core: YDL131W YHR079C
+Attachment:
+
+Complex 451
+Core: YNL273W YPR037C
+Attachment:
+
+Complex 452
+Core: YHR179W YMR201C
+Attachment:
+
+Complex 453
+Core: YLL010C YLR019W
+Attachment:
+
+Complex 454
+Core: YNL078W YOL070C
+Attachment:
+
+Complex 455
+Core: YDL201W YDR165W
+Attachment:
+
+Complex 456
+Core: YHR169W YLR309C
+Attachment:
+
+Complex 457
+Core: YCR005C YOR323C
+Attachment:
+
+Complex 458
+Core: YBR061C YPL183C
+Attachment:
+
+Complex 459
+Core: YGR286C YKR064W
+Attachment:
+
+Complex 460
+Core: YCL017C YER048W-A
+Attachment:
+
+Complex 461
+Core: YBR281C
+Attachment: YIL173W
+
+Complex 462
+Core: YER040W YNL103W
+Attachment:
+
+Complex 463
+Core: YIR021W YOL052C
+Attachment:
+
+Complex 464
+Core: YGR229C YKL047W
+Attachment:
+
+Complex 465
+Core: YEL013W YNL168C
+Attachment:
+
+Complex 466
+Core: YDR051C YLR024C
+Attachment:
+
+Complex 467
+Core: YDR097C YOL090W
+Attachment:
+
+Complex 468
+Core: YBR229C
+Attachment: YDR221W
+
+Complex 469
+Core: YJR042W YPL169C
+Attachment:
+
+Complex 470
+Core: YMR034C YPL211W
+Attachment:
+
+Complex 471
+Core: YBL086C YLR045C
+Attachment:
+
+Complex 472
+Core: YGL097W YLR293C
+Attachment:
+
+Complex 473
+Core: YGL094C YKL025C
+Attachment:
+
+Complex 474
+Core: YER070W YIL066C
+Attachment:
+
+Complex 475
+Core: YDR202C
+Attachment: YJR033C
+
+Complex 476
+Core: YNL286W YOR148C
+Attachment:
+
+Complex 477
+Core: YJR058C YOL062C
+Attachment:
+
+Complex 478
+Core: YDR140W YIL050W
+Attachment:
+
+Complex 479
+Core: YOL001W
+Attachment: YGR233C
+
+Complex 480
+Core: YLR006C YNR031C
+Attachment:
+
+Complex 481
+Core: YBR223C YGL082W
+Attachment:
+
+Complex 482
+Core: YDR501W YKR078W
+Attachment:
+
+Complex 483
+Core: YOR089C YOR370C
+Attachment:
+
+Complex 484
+Core: YFR009W YHL039W
+Attachment:
+
+Complex 485
+Core: YHL002W YNR006W
+Attachment:
+
+Complex 486
+Core: YKL128C YMR089C
+Attachment:
+
+Complex 487
+Core: YDL073W
+Attachment: YER018C
+
+Complex 488
+Core: YDR484W YJL029C
+Attachment:
+
+Complex 489
+Core: YCR086W YDR439W
+Attachment:
+
+Complex 490
+Core: YJL068C YOL017W
+Attachment:
+
+Complex 491
+Core: YIL108W YMR149W
+Attachment:
+
+Complex 492
+Core: YGR204W YIL137C
+Attachment:
+
+Complex 493
+Core: YFR034C YHR008C
+Attachment:
+
+Complex 494
+Core: YJL125C YNL062C
+Attachment:
+
+Complex 495
+Core: YML078W YPR184W
+Attachment:
+
+Complex 496
+Core: YGR173W YOL061W
+Attachment:
+
+Complex 497
+Core: YPL085W YPL227C
+Attachment:
+
+Complex 498
+Core: YLR014C YNL164C
+Attachment:
+
+Complex 499
+Core: YLL055W YPR062W
+Attachment:
+
+Complex 500
+Core: YDR199W YPR188C
+Attachment:
+
+Complex 501
+Core: YER098W YOL087C
+Attachment:
+
+Complex 502
+Core: YBL099W
+Attachment: YJR121W
+
+Complex 503
+Core: YDL117W YKR009C
+Attachment:
+
+Complex 504
+Core: YGR031W YJR089W
+Attachment:
+
+Complex 505
+Core: YDL238C YHR047C
+Attachment:
+
+Complex 506
+Core: YBR275C YKL005C
+Attachment:
+
+Complex 507
+Core: YCL043C YHR204W
+Attachment:
+
+Complex 508
+Core: YER174C YGR262C
+Attachment:
+
+Complex 509
+Core: YKL160W YLR219W
+Attachment:
+
+Complex 510
+Core: YFL054C YML006C
+Attachment:
+
+Complex 511
+Core: YNL056W YNL099C
+Attachment:
+
+Complex 512
+Core: YBR221C YDL239C
+Attachment:
+
+Complex 513
+Core: YBR150C YLR106C
+Attachment:
+
+Complex 514
+Core: YDL130W YDR251W
+Attachment:
+
+Complex 515
+Core: YDR502C YLR180W
+Attachment:
+
+Complex 516
+Core: YNL049C YPR181C
+Attachment:
+
+Complex 517
+Core: YDR409W YLR303W
+Attachment:
+
+Complex 518
+Core: YER149C YLL021W
+Attachment:
+
+Complex 519
+Core: YCR053W YML126C
+Attachment:
+
+Complex 520
+Core: YBR254C YKR068C
+Attachment:
+
+Complex 521
+Core: YIR006C YNL084C
+Attachment:
+
+Complex 522
+Core: YBR151W YNL126W
+Attachment:
+
+Complex 523
+Core: YBR117C YPR074C
+Attachment:
+
+Complex 524
+Core: YBL063W YMR016C
+Attachment:
+
+Complex 525
+Core: YDR071C YER089C
+Attachment:
+
+Complex 526
+Core: YGL068W YLR069C
+Attachment:
+
+Complex 527
+Core: YKL130C
+Attachment: YBR130C
+
+Complex 528
+Core: YMR255W YOR046C
+Attachment:
+
+Complex 529
+Core: YDR186C YOR127W
+Attachment:
+
+Complex 530
+Core: YFL022C YLR060W
+Attachment:
+
+Complex 531
+Core: YHR198C YLL005C
+Attachment:
+
+Complex 532
+Core: YHR102W YOR353C
+Attachment:
+
+Complex 533
+Core: YJL180C YNL315C
+Attachment:
+
+Complex 534
+Core: YLL062C YOR064C
+Attachment:
+
+Complex 535
+Core: YIL047C YLR039C
+Attachment:
+
+Complex 536
+Core: YGR240C YMR205C
+Attachment:
+
+Complex 537
+Core: YNL068C YNL254C
+Attachment:
+
+Complex 538
+Core: YDL074C YOR365C
+Attachment:
+
+Complex 539
+Core: YGL113W YHL024W
+Attachment:
+
+Complex 540
+Core: YKL040C YLL027W
+Attachment:
+
+Complex 541
+Core: YMR131C YPL207W
+Attachment:
+
+Complex 542
+Core: YDL235C YKL114C
+Attachment:
+
+Complex 543
+Core: YBL035C YNL102W
+Attachment:
+
+Complex 544
+Core: YDL122W YDR291W
+Attachment:
+
+Complex 545
+Core: YBR214W YDL047W
+Attachment:
+
+Complex 546
+Core: YGR033C
+Attachment: YLR218C
+
+Complex 547
+Core: YGL134W
+Attachment: YLR218C
+
+Complex 548
+Core: YLR262C-A YPR067W
+Attachment:
+
+Complex 549
+Core: YHR074W
+Attachment: YLR216C
+
+Complex 550
+Core: YGR271C-A
+Attachment: YMR014W
+
+Complex 551
+Core: YCRX13W YLR257W
+Attachment:
+
+Complex 552
+Core: YGL157W YGL171W
+Attachment:
+
+Complex 553
+Core: YDL031W YHR154W
+Attachment:
+
+Complex 554
+Core: YBL037W YNL265C
+Attachment:
+
+Complex 555
+Core: YLR190W
+Attachment: YPL031C
+
+Complex 556
+Core: YER059W
+Attachment: YPL031C
+
+Complex 557
+Core: YDR490C YPL005W
+Attachment:
+
+Complex 558
+Core: YLR425W YPL066W
+Attachment:
+
+Complex 559
+Core: YDR436W YFR040W
+Attachment:
+
+Complex 560
+Core: YMR116C YOR196C
+Attachment:
+
+Complex 561
+Core: YBR088C YKL113C
+Attachment:
+
+Complex 562
+Core: YBL087C YDR361C
+Attachment:
+
+Complex 563
+Core: YJL008C YJL159W
+Attachment:
+
+Complex 564
+Core: YCL064C YGR245C
+Attachment:
+
+Complex 565
+Core: YER127W
+Attachment: YDR299W
+
+Complex 566
+Core: YGL206C YGR167W
+Attachment:
+
+Complex 567
+Core: YDR159W YDR264C
+Attachment:
+
+Complex 568
+Core: YJL197W YJR031C
+Attachment:
+
+Complex 569
+Core: YBR142W YOL064C
+Attachment:
+
+Complex 570
+Core: YNL135C YPR166C
+Attachment:
+
+Complex 571
+Core: YGL253W YOL097C
+Attachment:
+
+Complex 572
+Core: YER071C YIR003W
+Attachment:
+
+Complex 573
+Core: YJR104C YMR038C
+Attachment:
+
+Complex 574
+Core: YFL006W
+Attachment: YFL007W
+
+Complex 575
+Core: YDR212W YNR052C
+Attachment:
+
+Complex 576
+Core: YOR201C
+Attachment: YNL155W
+
+Complex 577
+Core: YAR015W
+Attachment: YLR291C
+
+Complex 578
+Core: YER095W YML032C
+Attachment:
+
+Complex 579
+Core: YOR293W
+Attachment: YEL054C
+
+Complex 580
+Core: YMR196W
+Attachment: YDR017C
+
+Complex 581
+Core: YDR452W YHR161C
+Attachment:
+
+Complex 582
+Core: YJR110W YPL208W
+Attachment:
+
+Complex 583
+Core: YIL020C YJL080C
+Attachment:
+
+Complex 584
+Core: YGL017W YLR187W
+Attachment:
+
+Complex 585
+Core: YJL005W YNL138W
+Attachment:
+
+Complex 586
+Core: YGR076C YGR220C
+Attachment:
+
+Complex 587
+Core: YGL161C YJL095W
+Attachment:
+
+Complex 588
+Core: YDR137W YNL044W
+Attachment:
+
+Complex 589
+Core: YAL047C YNL224C
+Attachment:
+
+Complex 590
+Core: YLR305C YNL281W
+Attachment:
+
+Complex 591
+Core: YLR064W
+Attachment: YMR123W
+
+Complex 592
+Core: YLR011W
+Attachment: YJL203W
+
+Complex 593
+Core: YBL105C YIL143C
+Attachment:
+
+Complex 594
+Core: YLR355C
+Attachment: YER086W
+
+Complex 595
+Core: YEL017W YNL293W
+Attachment:
+
+Complex 596
+Core: YBR212W YIR037W
+Attachment:
+
+Complex 597
+Core: YER004W
+Attachment: YOR249C
+
+Complex 598
+Core: YGR161C YJL098W
+Attachment:
+
+Complex 599
+Core: YAL036C YOR091W
+Attachment:
+
+Complex 600
+Core: YCR072C YML093W
+Attachment:
+
+Complex 601
+Core: YNL272C
+Attachment: YNL287W
+
+Complex 602
+Core: YEL001C YGR126W
+Attachment:
+
+Complex 603
+Core: YPL110C
+Attachment: YJL076W
+
+Complex 604
+Core: YER062C YGL090W
+Attachment:
+
+Complex 605
+Core: YJR045C YOR347C
+Attachment:
+
+Complex 606
+Core: YIR019C
+Attachment: YMR284W
+
+Complex 607
+Core: YGR052W
+Attachment: YMR284W
+
+Complex 608
+Core: YNR050C
+Attachment: YBR247C
+
+Complex 609
+Core: YMR106C
+Attachment: YMR284W
+
+Complex 610
+Core: YGL063W YLL050C
+Attachment:
+
+Complex 611
+Core: YBR073W
+Attachment: YKR072C
+
+Complex 612
+Core: YJR131W
+Attachment: YKR072C
+
+Complex 613
+Core: YKR056W
+Attachment: YKR072C
+
+Complex 614
+Core: YKL212W YPL099C
+Attachment:
+
+Complex 615
+Core: YDR406W
+Attachment: YLR055C
+
+Complex 616
+Core: YDR081C YKL104C
+Attachment:
+
+Complex 617
+Core: YMR104C
+Attachment: YKL126W
+
+Complex 618
+Core: YMR007W
+Attachment: YLR055C
+
+Complex 619
+Core: YBR083W
+Attachment: YKL126W
+
+Complex 620
+Core: YOR243C
+Attachment: YLR002C
+
+Complex 621
+Core: YDR053W
+Attachment: YMR108W
+
+Complex 622
+Core: YEL047C YLR058C
+Attachment:
+
+Complex 623
+Core: YLR145W
+Attachment: YHR062C
+
+Complex 624
+Core: YBR148W YER006W
+Attachment:
+
+Complex 625
+Core: YNR062C
+Attachment: YDR254W
+
+Complex 626
+Core: YFR024C-A
+Attachment: YML011C
+
+Complex 627
+Core: YER033C
+Attachment: YDR293C
+
+Complex 628
+Core: YIL007C
+Attachment: YKR022C
+
+Complex 629
+Core: YCL047C
+Attachment: YKR022C
+
+Complex 630
+Core: YAR062W
+Attachment: YMR108W
+
+Complex 631
+Core: YBR062C
+Attachment: YMR083W
+
+Complex 632
+Core: YER156C YPL209C
+Attachment:
+
+Complex 633
+Core: YJL020C YJL021C
+Attachment:
+
+Complex 634
+Core: YDL004W YPL160W
+Attachment:
+
+Complex 635
+Core: YAR042W
+Attachment: YAR044W
+
+Complex 636
+Core: YBR169C YPL012W
+Attachment:
+
+Complex 637
+Core: YGR030C
+Attachment: YHR062C
+
+Complex 638
+Core: YGL238W
+Attachment: YDL087C
+
+Complex 639
+Core: YJL105W
+Attachment: YDR254W
+
+Complex 640
+Core: YER143W
+Attachment: YNR024W
+
+Complex 641
+Core: YGR054W YJL092W
+Attachment:
+
+Complex 642
+Core: YER003C
+Attachment: YIR001C
+
+Complex 643
+Core: YAL067C YNL162W
+Attachment:
+
+Complex 644
+Core: YPR078C
+Attachment: YDR108W
+
+Complex 645
+Core: YDR155C YLR299W
+Attachment:
+
+Complex 646
+Core: YBL081W
+Attachment: YPR173C
+
+Complex 647
+Core: YKL138C-A
+Attachment: YKR037C
+
+Complex 648
+Core: YAL020C
+Attachment: YBL071W-A
+
+Complex 649
+Core: YBL036C YGR185C
+Attachment:
+
+Complex 650
+Core: YKR043C
+Attachment: YBR011C
+
+Complex 651
+Core: YJR051W
+Attachment: YOL142W
+
+Complex 652
+Core: YDL197C
+Attachment: YMR128W
+
+Complex 653
+Core: YDR128W YOR093C
+Attachment:
+
+Complex 654
+Core: YDR188W
+Attachment: YDL143W
+
+Complex 655
+Core: YGR140W
+Attachment: YDL115C
+
+Complex 656
+Core: YEL043W
+Attachment: YKL142W
+
+Complex 657
+Core: YNL207W
+Attachment: YLR435W
+
+Complex 658
+Core: YLL060C YOR074C
+Attachment:
+
+Complex 659
+Core: YMR075C-A
+Attachment: YKR083C
+
+Complex 660
+Core: YBR233W-A
+Attachment: YKR083C
+
+Complex 661
+Core: YJR059W YOR257W
+Attachment:
+
+Complex 662
+Core: YPL225W
+Attachment: YOR224C
+
+Complex 663
+Core: YIL041W
+Attachment: YJR032W
+
+Complex 664
+Core: YJL066C YMR048W
+Attachment:
+
+Complex 665
+Core: YBR112C
+Attachment: YBR058C
+
+Complex 666
+Core: YPL167C
+Attachment: YGR274C
+
+Complex 667
+Core: YIL146C
+Attachment: YGL167C
+
+Complex 668
+Core: YDR342C
+Attachment: YGL167C
+
+Complex 669
+Core: YBR085W
+Attachment: YGL167C
+
+Complex 670
+Core: YBL030C
+Attachment: YGL167C
+
+Complex 671
+Core: YIL016W
+Attachment: YMR005W
+
+Complex 672
+Core: YNL163C
+Attachment: YLR022C
+
+Complex 673
+Core: YBR072W YNL313C
+Attachment:
+
+Complex 674
+Core: YPL222W
+Attachment: YPL254W
+
+Complex 675
+Core: YOR188W YPL216W
+Attachment:
+
+Complex 676
+Core: YHR036W
+Attachment: YER148W
+
+Complex 677
+Core: YDL059C
+Attachment: YGR252W
+
+Complex 678
+Core: YFR008W
+Attachment: YKR025W
+
+Complex 679
+Core: YDL144C
+Attachment: YKR025W
+
+Complex 680
+Core: YNL025C
+Attachment: YLR071C
+
+Complex 681
+Core: YIL067C
+Attachment: YGR084C
+
+Complex 682
+Core: YHR061C
+Attachment: YGR084C
+
+Complex 683
+Core: YGR246C
+Attachment: YER148W
+
+Complex 684
+Core: YCR089W
+Attachment: YGR084C
+
+Complex 685
+Core: YLR436C
+Attachment: YMR304W
+
+Complex 686
+Core: YAL053W
+Attachment: YKL028W
+
+Complex 687
+Core: YBL048W
+Attachment: YMR304W
+
+Complex 688
+Core: YDR538W
+Attachment: YMR304W
+
+Complex 689
+Core: YBR264C
+Attachment: YAR010C
+
+Complex 690
+Core: YLR167W
+Attachment: YKL028W
+
+Complex 691
+Core: YNL039W
+Attachment: YOR116C
+
+Complex 692
+Core: YKL097W-A
+Attachment: YKL028W
+
+Complex 693
+Core: YJR025C
+Attachment: YGL014W
+
+Complex 694
+Core: YNL076W
+Attachment: YGL252C
+
+Complex 695
+Core: YDR312W
+Attachment: YHR066W
+
+Complex 696
+Core: YKL014C
+Attachment: YHR066W
+
+Complex 697
+Core: YMR187C
+Attachment: YLR320W
+
+Complex 698
+Core: YIL121W
+Attachment: YJL115W
+
+Complex 699
+Core: YLR403W
+Attachment: YJL115W
+
+Complex 700
+Core: YMR233W
+Attachment: YLL022C
+
+Complex 701
+Core: YGL229C
+Attachment: YLL022C
+
+Complex 702
+Core: YDL213C
+Attachment: YDL208W
+
+Complex 703
+Core: YJR069C
+Attachment: YBR127C
+
+Complex 704
+Core: YEL034W YJR047C
+Attachment:
+
+Complex 705
+Core: YML121W
+Attachment: YBR127C
+
+Complex 706
+Core: YGL201C
+Attachment: YOR157C
+
+Complex 707
+Core: YDR179W-A
+Attachment: YOR157C
+
+Complex 708
+Core: YNL239W
+Attachment: YBR127C
+
+Complex 709
+Core: YDR011W
+Attachment: YOR157C
+
+Complex 710
+Core: YOL008W
+Attachment: YDL208W
+
+Complex 711
+Core: YAL046C
+Attachment: YAL043C
+
+Complex 712
+Core: YDR381C-A
+Attachment: YDL208W
+
+Complex 713
+Core: YBL101C
+Attachment: YAL043C
+
+Complex 714
+Core: YDR500C
+Attachment: YDL182W
+
+Complex 715
+Core: YNR067C
+Attachment: YDL208W
+
+Complex 716
+Core: YCL044C
+Attachment: YMR091C
+
+Complex 717
+Core: YBR161W
+Attachment: YMR091C
+
+Complex 718
+Core: YOR192C
+Attachment: YBR193C
+
+Complex 719
+Core: YLL013C
+Attachment: YER133W
+
+Complex 720
+Core: YJL132W
+Attachment: YER012W
+
+Complex 721
+Core: YPL137C
+Attachment: YER133W
+
+Complex 722
+Core: YOR227W
+Attachment: YER133W
+
+Complex 723
+Core: YLR290C
+Attachment: YER012W
+
+Complex 724
+Core: YDL203C
+Attachment: YER012W
+
+Complex 725
+Core: YMR311C
+Attachment: YER133W
+
+Complex 726
+Core: YNL233W
+Attachment: YER133W
+
+Complex 727
+Core: YNL176C
+Attachment: YGR090W
+
+Complex 728
+Core: YGL141W
+Attachment: YGL048C
+
+Complex 729
+Core: YGL004C
+Attachment: YGL048C
+
+Complex 730
+Core: YAL008W
+Attachment: YJL033W
+
+Complex 731
+Core: YBL020W
+Attachment: YGL011C
+
+Complex 732
+Core: YIL099W
+Attachment: YGL011C
+
+Complex 733
+Core: YLR211C
+Attachment: YGL011C
+
+Complex 734
+Core: YIR030C
+Attachment: YGL011C
+
+Complex 735
+Core: YFR028C
+Attachment: YNL248C
+
+Complex 736
+Core: YDR408C
+Attachment: YOR361C
+
+Complex 737
+Core: YDL103C
+Attachment: YGL245W
+
+Complex 738
+Core: YHR111W
+Attachment: YGL245W
+
+Complex 739
+Core: YGL016W
+Attachment: YOR361C
+
+Complex 740
+Core: YOR013W
+Attachment: YGR104C
+
+Complex 741
+Core: YOL022C
+Attachment: YHR027C
+
+Complex 742
+Core: YLR341W
+Attachment: YHR027C
+
+Complex 743
+Core: YER041W
+Attachment: YHR027C
+
+Complex 744
+Core: YFL038C
+Attachment: YIL148W
+
+Complex 745
+Core: YKL080W
+Attachment: YIL148W
+
+Complex 746
+Core: YKR001C
+Attachment: YIL148W
+
+Complex 747
+Core: YNL111C
+Attachment: YIL148W
+
+Complex 748
+Core: YKL095W
+Attachment: YLR147C
+
+Complex 749
+Core: YKL027W
+Attachment: YDL097C
+
+Complex 750
+Core: YBL017C
+Attachment: YDL097C
+
+Complex 751
+Core: YGL178W
+Attachment: YFR052W
+
+Complex 752
+Core: YOL016C
+Attachment: YBR109C
+
+Complex 753
+Core: YFR014C
+Attachment: YBR109C
+
+Complex 754
+Core: YPL096W
+Attachment: YEL037C
+
+Complex 755
+Core: YCL030C
+Attachment: YOL013C
+
+Complex 756
+Core: YDR127W
+Attachment: YOL013C
+
+Complex 757
+Core: YFR044C
+Attachment: YOL013C
+
+Complex 758
+Core: YKL024C
+Attachment: YOL013C
+
+Complex 759
+Core: YOR375C
+Attachment: YOL013C
+
+Complex 760
+Core: YNL167C
+Attachment: YBR010W
+
+Complex 761
+Core: YNL087W
+Attachment: YDR363W-A
+
+Complex 762
+Core: YLR387C
+Attachment: YIL035C
+
+Complex 763
+Core: YMR154C
+Attachment: YIL035C
+
+Complex 764
+Core: YDR043C
+Attachment: YIL035C
+
+Complex 765
+Core: YNL149C
+Attachment: YIL035C
+
+Complex 766
+Core: YOL143C
+Attachment: YIL070C
+
+Complex 767
+Core: YHR059W
+Attachment: YIL070C
+
+Complex 768
+Core: YKL151C
+Attachment: YIL070C
+
+Complex 769
+Core: YOR230W
+Attachment: YKR048C
+
+Complex 770
+Core: YMR110C
+Attachment: YKR048C
+
+Complex 771
+Core: YCL024W
+Attachment: YKR048C
+
+Complex 772
+Core: YBR267W
+Attachment: YKR048C
+
+Complex 773
+Core: YDR055W
+Attachment: YDL147W
+
+Complex 774
+Core: YHR170W
+Attachment: YDL147W
+
+Complex 775
+Core: YPL242C
+Attachment: YDL147W
+
+Complex 776
+Core: YPR003C
+Attachment: YDL147W
+
+Complex 777
+Core: YKL132C
+Attachment: YER021W
+
+Complex 778
+Core: YBL057C
+Attachment: YER021W
+
+Complex 779
+Core: YBR168W
+Attachment: YER021W
+
+Complex 780
+Core: YBR237W
+Attachment: YER021W
+
+Complex 781
+Core: YPL035C
+Attachment: YER021W
+
+Complex 782
+Core: YOR128C
+Attachment: YER021W
+
+Complex 783
+Core: YOL018C
+Attachment: YER021W
+
+Complex 784
+Core: YLR338W
+Attachment: YER021W
+
+Complex 785
+Core: YCL061C
+Attachment: YER021W
+
+Complex 786
+Core: YDR275W
+Attachment: YER021W
+
+Complex 787
+Core: YEL057C
+Attachment: YER021W
+
+Complex 788
+Core: YGL027C
+Attachment: YER021W
+
+Complex 789
+Core: YHL030W
+Attachment: YER021W
+
+Complex 790
+Core: YKR101W
+Attachment: YER021W
+
+Complex 791
+Core: YJL165C
+Attachment: YER021W
+
+Complex 792
+Core: YOR172W
+Attachment: YDR174W
+
+Complex 793
+Core: YLR369W
+Attachment: YDL014W
+
+Complex 794
+Core: YOR381W
+Attachment: YDL014W
+

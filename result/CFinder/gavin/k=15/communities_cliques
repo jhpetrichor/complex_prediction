@@ -1,0 +1,10 @@
+# The contained cliques in the communities at k=15
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/gavin.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+0: 1260 1261 1515 1516 1615 1616 1641 1642 1643 1644 1647 1648 1649 1650 1651 1652 1653 1654 1655 1656 1664 1666 1667 1668 1669 1670 1614 1640 1645 1646 1659 1661 1663 1665 1657 1662 1658 1660 1607 1608 1605 1312 
+1: 1396 1401 1402 
+2: 1550 1551 1613 1556 1639 

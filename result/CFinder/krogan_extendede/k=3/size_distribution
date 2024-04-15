@@ -1,0 +1,19 @@
+# The size distr. of the  communities at k=3
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/krogan_extended.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+3 79
+4 15
+5 9
+6 2
+7 6
+8 4
+9 1
+10 2
+11 1
+13 1
+1312 1
+

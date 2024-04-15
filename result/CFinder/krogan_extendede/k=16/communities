@@ -1,0 +1,8 @@
+# The communities at k=16
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/krogan_extended.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+0: YOR261C YDR363W-A YDL147W YDL007W YDR394W YER021W YFR004W YFR010W YFR052W YGL048C YHR027C YHR200W YIL075C YKL145W YOR117W YOR259C YDL097C YDR427W YPR108W 

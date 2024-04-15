@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/randomwalk.dir/src/lib/ungraph.cpp.o CMakeFiles/randomwalk.dir/src/lib/bio_information.cpp.o CMakeFiles/randomwalk.dir/src/lib/dag.cpp.o CMakeFiles/randomwalk.dir/src/randomwalk.cpp.o -o ../bin/randomwalk 

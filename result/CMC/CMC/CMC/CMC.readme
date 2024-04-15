@@ -1,0 +1,31 @@
+Usage:
+	CMC ppi_score_filename  min_deg_ratio  min_size overlap_thres merge_thres output_file
+
+This program calls the "quasiCliques" program to find maximal cliques 
+
+Parameters:
+
+1. ppi_score_filename: contains the set of interactions and their scores. Each line represents an interaction, 
+                   and contains a pair of proteins and their score.
+
+2. min_deg_ratio: set it to 1
+
+3. min_size: the minimum size of the clusters generated
+
+4. overlap_thres: the threshold used to remove or merge highly overlapped clusters. Given two clusters C1 and C2, if
+                 the overlap between C1 and C2 is no less than filter_score*|C2|, then C2 will either be 
+                 removed or merged.
+
+5. merge_thres: the threshold used to remove or merge highly overlapped clusters. Given two clusters C1 and C2, if
+                the overlap between C1 and C2 is no less than filter_score*|C2|, and the inter-connectivity
+                between C1 and C2 is no less than merge_thres, then C2 is merged with C1, otherwise C2 is 
+                removed.
+
+6. output_file: contains the list of clusters generated. Each line represents a cluster. The string 
+                before ':' is the identifier of the cluster, followed by the set of proteins in this cluster. 
+
+
+
+Example:
+
+   CMC  ppi.score.txt  1 4 0.5 0.25  clusters.txt

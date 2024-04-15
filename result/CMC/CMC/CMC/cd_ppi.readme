@@ -1,0 +1,29 @@
+Usage:
+
+  cd_ppi train_ppi_file test_ppi_file method  #iterations output_filename
+
+
+Parameters: 
+1. train_ppi_file: contains protein protein interactions. Each line represents an interaction, 
+                   and contains a pair of proteins. The program uses this file to calculate the
+                   score of every protein pair. 
+
+2. test_ppi_file: contains the set of interactions to be assessed. Its format is the same
+                  as that of "train_ppi_file". The program will calculate the score of the 
+                  proteins pairs in this file, and output those protein pairs with non-zero
+                  score. If "train_ppi_file" and "test_ppi_file" are
+                  the same file, then the program is assessing the reliability of the interactions
+                  in "train_ppi_file". If the value of "test_ppi_file" is "NULL", then the program
+                  will predict new protein interactions that are not in "train_ppi_file", and
+                  output those proteins pairs that are not in "train_ppi_file" and their interacting
+                  scores. 
+
+3. method: takes the following values: 
+                 CD: CD-distance
+            AdjstCd: Adjusted CD-distance
+                 FS: FS-weight
+    
+4. nmax_iterations: is the number of iterations. 
+
+5. output_filename: Each line contains a pairof proteins and their interacting score. 
+

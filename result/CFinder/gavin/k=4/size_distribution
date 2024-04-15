@@ -1,0 +1,29 @@
+# The size distr. of the  communities at k=4
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/gavin.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+4 47
+5 24
+6 11
+7 12
+8 7
+9 9
+10 5
+11 4
+13 1
+14 2
+17 3
+18 1
+20 2
+25 1
+34 1
+35 1
+46 1
+53 2
+60 1
+77 1
+93 1
+

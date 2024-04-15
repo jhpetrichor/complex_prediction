@@ -1,0 +1,19 @@
+# The size distr. of the _merged communities at k=14
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/collins.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+14 4
+15 2
+16 1
+17 1
+22 1
+24 1
+25 2
+27 1
+34 1
+37 1
+90 1
+

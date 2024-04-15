@@ -1,0 +1,10 @@
+# The graph of at k=17
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/collins.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+3 -8 4
+4 6 11
+7 -8 6

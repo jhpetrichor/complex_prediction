@@ -1,0 +1,8 @@
+# The contained cliques in the communities at k=46
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/collins.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+-0: -2471 -2472 -2473 -2475 -2476 -2477 -2478 -2479 -2481 -2482 -2483 -2485 -2486 -2487 -2488 -2489 -2490 -2492 -2494 -2495 -2496 -2497 -2498 -2499 -2500 -2501 -2502 -2503 -2504 -2505 -2506 -2507 -2508 -2509 -2510 -2512 -2513 -2514 -2515 -2516 -2517 -2518 -2519 -2520 -2521 -2525 -2526 -2527 -2529 -2530 -2523 -2522 -2484 -2491 

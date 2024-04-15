@@ -1,0 +1,13 @@
+# The node membership distr. in the _exact communities at k=4
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/collins.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+0 909
+1 680
+2 28
+3 4
+4 1
+

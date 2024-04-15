@@ -1,0 +1,52 @@
+Usage:
+	filterNadd_ppi ppi_filename #iterations filter_method filter_min_score add_method add_min_score output_file
+
+This program calls the "cd_ppi" program to calculate PPI scores. 
+
+Parameters:
+
+1. ppi_filename: contains the set of interactions. Each line represents an interaction, 
+                   and contains a pair of proteins. The program uses this file to calculate the
+                   score of every protein pair. 
+
+2. #iterations: number of iterations for the chosen scoring methods. Suggested value: 2. 
+
+3. filter_method: the scoring method used to remove non-reliable interactions. It takes the following values: 
+                 CD: CD-distance
+            AdjstCd: Adjusted CD-distance 
+                 FS: FS-weight              
+
+4. filter_min_score: the threshold used to filter interactions with low score from "ppi_filename"
+                     If its value is between 0 and 1, then all the interactions with score lower 
+                     than its value are removed. If its value is an integer k that is larger 
+                     than 1, then only the top-k interactions are retained. 
+
+5. add_method: the scoring method used to add new interactions. It takes the following values: 
+                 CD: CD-distance
+            AdjstCd: Adjusted CD-distance 
+                 FS: FS-weight              
+
+
+6. add_min_score: the threshold used to add new predicted interactions. If its value falls in (0, 1],
+                  then those proteins pairs that are not in "ppi_filename" but have a score
+                  no less than the given value are added to the final output file. If its value is
+                  an integer k that is larger than 1, then only the top-k new proteins pairs will
+                  be added. If do not want to add new interactions, set its value to 0. 
+
+7. output_file: contains the final proteins pairs. Each line contains a pair of proteins and 
+                their score. 
+                  
+
+Example: 
+
+1. The following command uses AdjstCD to calculate score, and removes interactions with 0 score, and
+   add the top-1000 new interactions to the PPI network.  
+
+	filterNadd_ppi  dip.ppi.txt 1 AdjstCD 0  AdjstCD 1000  ppi.score.txt  
+
+2. Same as the above command except that it uses iterated AdjstCD to calculate score. The number of
+   iterations is 2. 
+
+	filterNadd_ppi  dip.ppi.txt 2 AdjstCD 0 AdjstCD  1000  ppi.score.txt
+
+

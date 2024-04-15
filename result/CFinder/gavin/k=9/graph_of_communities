@@ -1,0 +1,12 @@
+# The graph of at k=9
+# from /home/jh/code/complex_predict/result/bops/BOPS/dataset/gavin.txt
+# at no lower link weight threshold,
+# and at no upper link weight threshold.
+# Links were treated as undirected.
+# The maximal allowed time per node during clique search was 10.000000 secs.
+
+3 17 1
+14 15 1
+14 18 1
+14 21 3
+18 21 9
