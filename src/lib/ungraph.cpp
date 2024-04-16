@@ -1,8 +1,9 @@
 #include "../../include/ungraph.h"
 
-Protein::Protein(int idx, std::string _protein_name) {
+Protein::Protein(int idx, std::string _protein_name, double _weight) {
     id = idx;
     protein_name = std::move(_protein_name);
+    weight = _weight;
 }
 
 void Protein::add_neighbor(Protein* _protein) {
@@ -23,8 +24,12 @@ void Protein::remove_neighbor(Protein* _protein) {
     neighbor.erase(_protein);
 }
 
-int Protein::degree() {
-    return neighbor.size();
+int Protein::degree() const {
+    return (int)neighbor.size();
+}
+
+bool Protein::ProteinCompareByWeight(const Protein* p1, const Protein* p2){
+    return p1->weight < p2->weight;
 }
 
 Edge::Edge(Protein* _node_a, Protein* _node_b, double _weight, double _balanced_weight, int _visited_count) {
@@ -51,10 +56,10 @@ Edge::Edge(Edge *pEdge) {
     visited_count = pEdge->visited_count;
 }
 
-UnGraph::UnGraph() {
+UnGraph::UnGraph(string ppi_file) {
     std::set<std::string> protein_list;
     std::vector<std::string> edge_list;    // 记录边
-    read_edge_list(PPI_FILE, protein_list, edge_list);
+    read_edge_list(ppi_file, protein_list, edge_list);
 
     ID2Protein.resize(protein_list.size());
     connected.resize(protein_list.size(), std::vector<bool>(protein_list.size(), false));
@@ -82,6 +87,7 @@ UnGraph::UnGraph() {
         Edge2ID[e_set] = edges.size();
         edges.emplace_back(e);
     }
+
     std::cout << "Node: " << proteins.size() << std::endl;
     std::cout << "edge: " << edges.size() << std::endl;
 }
@@ -153,6 +159,19 @@ void UnGraph::weight_by_go_term(BioInformation& bio, DAG& dag) {
     }
 }
 
+// 直接算两个或者更多的节点
+double UnGraph::agglomeration_coefficient(const vector<Protein*>& nodes){
+    int edge_count = 0;
+    for(auto node1 =  nodes.begin(); node1 != nodes.end(); node1++) {
+        for(auto node2 = std::next(node1); node2 != nodes.end(); node2++) {
+            if(getEdge(*node1, *node2)) {
+                edge_count +=1 ;
+            }
+        }
+    }
+    return (double)edge_count * 2 / (nodes.size() * (nodes.size() - 1));
+}
+
 // 計算平衡後的加權係數
 void UnGraph::calculate_balanced_weight() {
     map <int,double> Sum;
@@ -172,7 +191,7 @@ void UnGraph::calculate_balanced_weight() {
     }
 }
 
-void UnGraph::calculate_structure_similarty(vector<vector<double>>& ss_weight) {
+__attribute__((unused)) void UnGraph::calculate_structure_similarty(vector<vector<double>>& ss_weight) {
     ss_weight.resize(ID2Protein.size(), vector<double>(ID2Protein.size(), 0.0));
     vector<vector<int>> common_neighbor_size;
     get_common_neighbor_size(common_neighbor_size);
@@ -270,12 +289,7 @@ void UnGraph::calculate_average_attraction(vector<double>& attractions) {
 
     for(int i = 0; i < attractions.size(); ++i) {
         attractions[i] /= ID2Protein[i]->neighbor.size();
-//        std::cout << ID2Protein[i]->protein_name << "\t" << attractions[i] / ID2Protein[i]->neighbor.size() << "\t" << attractions[i] << endl;
     }
-
-//    for(int i = 0; i <attractions.size(); ++i) {
-//        std::cout << ID2Protein[i]->protein_name << "\t" << attractions[i] << endl;
-//    }
 }
 
 void UnGraph::calculate_walk_probability(vector<vector<double>>& probability) {
@@ -295,100 +309,105 @@ void UnGraph::calculate_walk_probability(vector<vector<double>>& probability) {
 
 }
 
-// 其实可以用map<int, int>代替
-// 将与X联通的节点直接与根节点相连
-int UnGraph::get_fa(int fa[], int x) {
-    int temp = x;
-    while(x != fa[x]) {
-        x = fa[x];
+int UnGraph::find_parent(int protein, map<int, int>& parent) {
+    int root = protein;
+    // find root
+    while (root != parent[root]) {
+        root = parent[root];
     }
-
-    while( temp != fa[temp]) {
-        int z = temp;
-        temp = fa[temp];
-        fa[z] = x;
+    // path compression
+    while (protein != root) {
+        int next = parent[protein];
+        parent[protein] = root;
+        protein = next;
     }
-
-    return x;
+    return root;
 }
 
-void UnGraph::split_graph(const UnGraph& origin_ppi, queue<SubPPI>& ppi_queue, vector<SubPPI>& splited_ppi) {
+vector<double> UnGraph::calculate_protein_weight() {
+    vector<double> protein_weight(ID2Protein.size(), 0.0);
+
+    for(auto& e: edges) {
+        protein_weight[e->node_a->id] += e->balanced_weight;
+        protein_weight[e->node_b->id] += e->balanced_weight;
+    }
+
+    return std::move(protein_weight);
+}
+
+void UnGraph::split_graph(queue<SubPPI>& ppi_queue, vector<SubPPI>& splited_ppi) {
     SubPPI current_ppi = ppi_queue.front();
     ppi_queue.pop();
-
-    if(current_ppi.proteins.size() <= COMPLEX_MAX_SIZE) {
+    if (current_ppi.proteins.size() <= 20) {
         splited_ppi.emplace_back(current_ppi);
         return;
     }
 
-    int fa[origin_ppi.proteins.size()];
-    for(int i = 0; i <= origin_ppi.proteins.size(); ++i) {
-        fa[i] = i;
+    map<int, int> parent;
+    for(auto & protein : current_ppi.proteins) {
+        parent[protein->id] = protein->id;
     }
 
-    int add_edge_count = 0;  // 记录添加的边的数量
-    std::sort(current_ppi.edges.begin(), current_ppi.edges.end(), SubPPI::CompareByVisitedCount);
-//    for(auto& e: current_ppi.edges) {
-//        cout << e->node_a->protein_name << "\t" << e->node_b->protein_name << "\t" << e->visited_count << endl;
-//    }
-    for(int i = current_ppi.edges.size() - 1; i >= 0; --i) {
-        if(get_fa(fa, current_ppi.edges[i]->node_a->id) == get_fa(fa, current_ppi.edges[i]->node_b->id)) {
-            continue;
-        }
-        fa[get_fa(fa, current_ppi.edges[i]->node_a->id)] = fa[get_fa(fa, current_ppi.edges[i]->node_b->id)];
-        add_edge_count += 1;
+    sort(current_ppi.edges.begin(), current_ppi.edges.end(), SubPPI::CompareByVisitedCount);
 
-        if(add_edge_count == current_ppi.edges.size() - 2) {
+    int count = 0;
+    for (Edge* edge : current_ppi.edges) {
+        int proteina = UnGraph::find_parent(edge->node_a->id, parent);
+        int proteinb = UnGraph::find_parent(edge->node_b->id, parent);
+
+        if (proteina == proteinb)
+            continue;
+
+        parent[proteina] = proteinb;
+        count += 1;
+        if(count == current_ppi.proteins.size() - 2) {
             break;
         }
     }
-
-    int current_location = 0;
-    while(true) {
+    int location = -1;
+    while (1) {
         bool success = false;
         SubPPI new_ppi;
-        set<Protein*> proteins;
+        set<Protein*> protein_set;
 
-        for (int i = current_location + 1; i <current_ppi.proteins.size(); i++) {
-            // 找到一个根节点为自身的蛋白质，并记录该节点的id为location
-            if (get_fa(fa, current_ppi.proteins[i]->id) == current_ppi.proteins[i]->id) {
-                current_location = i;
+        for(int i = location + 1; i < current_ppi.proteins.size(); ++i) {
+            int protein_a = current_ppi.proteins[i]->id;
+            if(UnGraph::find_parent(protein_a, parent) == protein_a) {
+                location = i;
                 success = true;
                 break;
             }
         }
 
-        if (success == false)
+        if (!success)
             break;
 
-        for (int i = 0; i < current_ppi.proteins.size(); ++i) {
-            if (get_fa(fa, current_ppi.proteins[i]->id) == current_ppi.proteins[current_location]->id) {
+        for (int i = 0;i < current_ppi.proteins.size();i++)
+        {
+            if (UnGraph::find_parent(current_ppi.proteins[i]->id, parent) == current_ppi.proteins[location]->id)
+            {
                 new_ppi.proteins.push_back(current_ppi.proteins[i]);
-                proteins.insert(current_ppi.proteins[i]);
+                protein_set.insert(current_ppi.proteins[i]);
             }
         }
 
-        for (int i = 0;i < current_ppi.edges.size();i++) {
-            if (proteins.count(current_ppi.edges[i]->node_a) && proteins.count(current_ppi.edges[i]->node_b)) {
-                new_ppi.edges.push_back(current_ppi.edges[i]);
+        for (Edge* edge : current_ppi.edges) {
+            if (protein_set.count(edge->node_a) && protein_set.count(edge->node_b)) {
+                new_ppi.edges.push_back(edge);
             }
         }
-        ppi_queue.push(new_ppi);
+//        for(int i = 0; i < current_ppi.edges.size() - 1; ++i) {
+//            if (protein_set.count(current_ppi.edges[i]->node_a) && protein_set.count(current_ppi.edges[i]->node_b)) {
+//                new_ppi.edges.push_back(current_ppi.edges[i]);
+//            }
+//        }
+        if(new_ppi.proteins.size() >= 3){
+            ppi_queue.push(new_ppi);
+            std::cout << new_ppi.proteins.size() << "\t" << new_ppi.edges.size() << endl;
+        }
     }
 }
 
 bool UnGraph::compare_pairs(const pair<Edge*, int>& pair1, const pair<Edge*, int>& pair2) {
-    return pair1.second < pair2.second;
+    return pair1.second > pair2.second;
 }
-
-
-//int main() {
-//    UnGraph ug;
-//    for(auto& node: ug.proteins) {
-//        std::cout << node->protein_name << node->id << std::endl;
-//    }
-//    std::cout << ug.proteins.size() << std::endl;
-//
-//
-//    return 0;
-//}

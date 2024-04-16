@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/max_matched.dir/src/lib/ungraph.cpp.o CMakeFiles/max_matched.dir/src/lib/bio_information.cpp.o CMakeFiles/max_matched.dir/src/lib/dag.cpp.o CMakeFiles/max_matched.dir/src/max_matched.cpp.o -o ../bin/max_matched 

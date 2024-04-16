@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/new_delete.dir/src/lib/ungraph.cpp.o CMakeFiles/new_delete.dir/src/lib/bio_information.cpp.o CMakeFiles/new_delete.dir/src/lib/dag.cpp.o CMakeFiles/new_delete.dir/src/new_delete.cpp.o -o /home/jh/Desktop/complex_predict/bin/new_delete 

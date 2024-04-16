@@ -5,7 +5,10 @@ JiaqingLv Dalian University of Technology jiaqinglv@foxmail.com
 ZhenYao Dalian University of Technology 22151303@zju.edu.cn
 BingLiang Dalian University of Technology liangbing@dlut.edu.cn
 YijiaZhang Dalian Maritime University zhyj@dmu.edu.cn
-*/ 
+*/
+#ifndef __BOPS_H__
+#define __BOPS_H__
+
 #include <cstdio>
 #include <vector>
 #include <algorithm>
@@ -106,7 +109,6 @@ void get_balanced_interaction(PPI &Current_ppi,double Balanced_index)
 	{
 	    Current_ppi.interaction[i].balanced_interaction = pow(Current_ppi.interaction[i].interaction,Balanced_index) / pow(Sum[Current_ppi.interaction[i].proteina],Balanced_index - 1) + pow(Current_ppi.interaction[i].interaction,Balanced_index) / pow(Sum[Current_ppi.interaction[i].proteinb],Balanced_index - 1);
 	}
-    return;
 }
 
 int getfa(int x,int fa[])
@@ -217,7 +219,6 @@ void split_ppi(queue<PPI> &Ppi_queue,vector <PPI> &Splitted_ppi)
         }
         Ppi_queue.push(New_ppi);
     }
-    return;
 }
 
 double calculate_similarity(vector <int> Complexa,vector <int> Complexb)
@@ -291,8 +292,6 @@ void update_result(Result &Complex,vector<Result> &result,double Similarity_thre
         }
     }
     result.push_back(Complex);
-    
-    return;
 }
 
 int get_Current_ppi_protein(PPI &Current_ppi,int x)
@@ -379,7 +378,6 @@ void get_complexs(PPI &Current_ppi,vector <Result> &result,double Similarity_thr
 	{
 		update_result(Complex_result[i],result,Similarity_threshold);
 	}
-	return;
 }
 
 vector<Result> get_result(PPI &Current_ppi,double Similarity_threshold)
@@ -406,7 +404,7 @@ vector<Result> get_result(PPI &Current_ppi,double Similarity_threshold)
     }
     return std::move(result);
 }
-void write_proteins(vector <Result> Result_complex,string Result_file)
+void write_proteins(vector<Result> Result_complex, string Result_file)
 {////This function writes predicted protein complexes in result
   	sort(Result_complex.begin(),Result_complex.end()); 
 	ofstream fout(Result_file);
@@ -438,42 +436,17 @@ void write_proteins(vector <Result> Result_complex,string Result_file)
         fout << Tmps << endl;
     }
     fout.close();
-    return;
+    fout.flush();
 }
 
-
-
-void print_information(string Ppidata_file,string Result_file,double Balanced_index)
+vector<Result> bops(string ppi_file, double Balanced_index = 1.50)
 {
-	printf("_________________________________________\n");
-	cout << "The PPI_file is "<< Ppidata_file << endl;
-	cout << "The result_file is "<< Result_file << endl;
-	printf("The balanced index is %.3lf\n",Balanced_index);
-	printf("_________________________________________\n");
-	printf("It will takes tens of minutes.\n");
-}
-
-int main(int argc, char *argv[])
-{
-	double Balanced_index,Similarity_threshold = 0.45;
-	string Ppidata_file,Result_file;
-	PPI Original_ppi;
-	
-	Ppidata_file = argv[1];
-	Result_file = argv[2];
-	read_proteins(Original_ppi,Ppidata_file);
-	if (argc >= 4)
-	{
-		sscanf(argv[3],"%lf",&Balanced_index);
-	}else
-	{
-		Balanced_index = 1.5;
-	}
-	
-	print_information(Ppidata_file,Result_file,Balanced_index);
+    double Similarity_threshold = 0.45;
+    PPI Original_ppi;
+    read_proteins(Original_ppi,ppi_file);
     get_balanced_interaction(Original_ppi,Balanced_index);
-    write_proteins(get_result(Original_ppi,Similarity_threshold),Result_file);
-
-    return 0;
+    vector<Result> complexes= get_result(Original_ppi, Similarity_threshold);
+    return std::move(complexes);
 }
 
+#endif

@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/cns.dir/src/lib/ungraph.cpp.o CMakeFiles/cns.dir/src/lib/bio_information.cpp.o CMakeFiles/cns.dir/src/lib/dag.cpp.o CMakeFiles/cns.dir/src/cns.cpp.o -o ../bin/cns 

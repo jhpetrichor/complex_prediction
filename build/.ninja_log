@@ -1,0 +1,22 @@
+# ninja log v5
+2	838	1712835792271071341	CMakeFiles/randomwalk.dir/src/lib/bio_information.cpp.o	e78d4ca8243108fa
+1	551	1712835791987084382	CMakeFiles/new_cns.dir/src/new_cns.cpp.o	a42c2f60d697e9bf
+1	1509	1712835792943040488	CMakeFiles/max_matched.dir/src/lib/ungraph.cpp.o	b15499602af10315
+2	1577	1712835793011037367	CMakeFiles/randomwalk.dir/src/lib/ungraph.cpp.o	ad6426e12fe98cca
+1509	1608	1712835793043035899	../bin/max_matched	5ba5a54e1dcc244d
+1	1065	1712835792499060873	CMakeFiles/cns.dir/src/lib/dag.cpp.o	bca0394f0ecca154
+1302	1390	1712835792827045814	../bin/new_cns	fa3dae28e23fbc44
+2	907	1712835792343068035	CMakeFiles/max_matched.dir/src/max_matched.cpp.o	b2001f48ab00de33
+0	91	1712835819149856103	../bin/cns	58a0d5a1880b8aac
+1	951	1712835792387066015	CMakeFiles/cns.dir/src/cns.cpp.o	6590b0c26a6006b
+1	967	1712835792403065281	CMakeFiles/cns.dir/src/cc.cpp.o	4e0d3d99f1f78fe5
+2	942	1712835792375066566	CMakeFiles/max_matched.dir/src/lib/dag.cpp.o	9c827db2194efa0d
+2	925	1712835792359067301	CMakeFiles/randomwalk.dir/src/lib/dag.cpp.o	8ca95d5b87a1d0e
+0	1437	1712835792871043794	CMakeFiles/cns.dir/src/lib/ungraph.cpp.o	7828169c0c0b0544
+1	1216	1712835792651053894	CMakeFiles/new_cns.dir/src/lib/dag.cpp.o	ed5573e796b497d2
+1577	1676	1712835793111032781	../bin/randomwalk	789e545860e08d1b
+2	680	1712835792115078503	CMakeFiles/max_matched.dir/src/lib/bio_information.cpp.o	7b89efc3fe60b29d
+1	1302	1712835792735050038	CMakeFiles/new_cns.dir/src/lib/ungraph.cpp.o	399a35d40cbeab58
+2	1180	1712835792615055547	CMakeFiles/randomwalk.dir/src/randomwalk.cpp.o	25f86ece6db1ccec
+1	772	1712835792207074280	CMakeFiles/cns.dir/src/lib/bio_information.cpp.o	747c085b755242e0
+1	741	1712835792175075749	CMakeFiles/new_cns.dir/src/lib/bio_information.cpp.o	5f7677b654246faf

@@ -1,4 +1,5 @@
 #include "../include/ungraph.h"
+#include "../include/bops.h"
 
 #include <iostream>
 #include <vector>
@@ -8,17 +9,23 @@
 #include <set>
 #include <algorithm>
 #include "../include/tools.h"
+#include <cstdlib>
+#include <thread>
+#include <mutex>
+
+int parent[10000];
 
 class RandomWalk {
 public:
     UnGraph* graph;
     std::unordered_map<int, std::vector<int>> adjList;
-    std::mt19937 rng;   // 随机数生成
+//    std::mt19937 rng;   // 随机数生成
     std::map<pair<int, int>, double> walk_probability;
 public:
     RandomWalk(UnGraph* g){
         graph = g;
-        rng = std::mt19937(std::time(0));
+//        rng = std::mt19937(std::time(0));
+        srand(static_cast<unsigned int>(time(NULL)));
         for(auto& e: graph->edges) {
             adjList[e->node_a->id].push_back(e->node_b->id);
             adjList[e->node_b->id].push_back(e->node_a->id);
@@ -27,23 +34,23 @@ public:
 
     }
 
-    std::vector<int> walk(int startNode, int walkLength) {
-        std::vector<int> walk;
-        walk.push_back(startNode);
-        int currentNode = startNode;
-        for (int i = 1; i < walkLength; ++i) {
-            std::vector<int> neighbors = adjList[currentNode];
-            if (!neighbors.empty()) {
-                std::uniform_int_distribution<int> dist(0, neighbors.size() - 1);
-                int nextNode = neighbors[dist(rng)];
-                walk.push_back(nextNode);
-                currentNode = nextNode;
-            } else {
-                break; // 如果当前节点没有邻居，则停止游走
-            }
-        }
-        return walk;
-    }
+//    std::vector<int> walk(int startNode, int walkLength) {
+//        std::vector<int> walk;
+//        walk.push_back(startNode);
+//        int currentNode = startNode;
+//        for (int i = 1; i < walkLength; ++i) {
+//            std::vector<int> neighbors = adjList[currentNode];
+//            if (!neighbors.empty()) {
+//                std::uniform_int_distribution<int> dist(0, neighbors.size() - 1);
+//                int nextNode = neighbors[dist(rng)];
+//                walk.push_back(nextNode);
+//                currentNode = nextNode;
+//            } else {
+//                break; // 如果当前节点没有邻居，则停止游走
+//            }
+//        }
+//        return walk;
+//    }
 
     // 选择下一个节点
     Protein* choose_next_node(Protein* current_node, const vector<vector<double>>& probability) {
@@ -86,7 +93,7 @@ public:
             cout << "nullptr!" << endl;
             return walk;
         }
-        for (int step = 0; step < neighbors_n2.size(); ++step) {
+        for (int step = 0; step < neighbors_n2.size() * 5; ++step) {
             // 选择下一个节点
             Protein* nextNode = choose_next_node(current_node, probability);
             if(nextNode == nullptr) {
@@ -95,126 +102,194 @@ public:
             }
             Edge* e = graph->getEdge(current_node, nextNode);
             if(e != nullptr) {
-                e->visited_count += 1;
+                e->visited_count += (double)1 / neighbors_n2.size();
             }
-            // 更新当前节点
-            current_node = nextNode;
-            // 输出结果
 
-            std::cout << "Step " << step + 1 << ": Node " << current_node->protein_name << std::endl;
-            if(!neighbors_n2.count(current_node)) break;
+//            std::cout << "Step " << step + 1 << ": Node " << current_node->protein_name << std::endl;
+            if(!neighbors_n2.count(current_node)) {
+                current_node = graph->ID2Protein[startNode];
+                continue;
+            }
+
+            current_node = nextNode;
         }
     }
 };
 
+int find(int x)
+{//This is a data structure, called Disjoint Set Union to check if two proteins are in the same set
+    int a = x;
+    while (x != parent[x])
+    {
+        x = parent[x];
+    }
+    while (a != parent[a])
+    {
+        int z = a;
+        a = parent[a];
+        parent[z] = x;
+    }
+    return x;
+}
 
-class CommunityDetection {
-private:
-    UnGraph& graph;
-    RandomWalk& rw;
+void split_graph(queue<SubPPI>& ppi_queue, vector<SubPPI>& splited_ppi) {
+    SubPPI current_ppi = ppi_queue.front();
+    ppi_queue.pop();
+    if (current_ppi.proteins.size() <= 20) {
+        splited_ppi.emplace_back(current_ppi);
+        return;
+    }
+    // Initializes disjoint set union with protein ids
+    for (int i = 0; i < current_ppi.proteins.size(); i++) {
+        parent[current_ppi.proteins[i]->id] = current_ppi.proteins[i]->id;
+    }
 
-public:
-    CommunityDetection(UnGraph& g, RandomWalk& walk) : graph(g), rw(walk) {}
+    sort(current_ppi.edges.begin(), current_ppi.edges.end(), SubPPI::CompareByVisitedCount);
 
-    // 通过随机游走进行社区检测
-    std::unordered_map<int, int> detectCommunities(int numWalks, int walkLength) {
-        std::unordered_map<int, int> communities;
-        std::unordered_map<int, std::vector<int>> nodeWalks;
+    int count = 0;
+    for (Edge* edge : current_ppi.edges) {
+        int proteina = find(edge->node_a->id);
+        int proteinb = find(edge->node_b->id);
 
-        // 执行多次随机游走
-        for (int i = 0; i < numWalks; ++i) {
-            int startNode = rand() % rw.adjList.size();
-            std::vector<int> walk = rw.walk(startNode, walkLength);
-            for (int node : walk) {
-                nodeWalks[node].push_back(i);
+        if (proteina == proteinb)
+            continue;
+
+        parent[proteina] = proteinb;
+        current_ppi.set_edges.insert(edge);
+        count += 1;
+        if(count == current_ppi.edges.size() - 2) {
+            break;
+        }
+    }
+    int location = -1;
+    while (1) {
+        bool success = false;
+        SubPPI new_ppi;
+        set<Protein*> protein_set;
+
+        for(int i = location + 1; i < current_ppi.proteins.size(); ++i) {
+            int protein_a = current_ppi.proteins[i]->id;
+            if(find(protein_a) == protein_a) {
+                location = i;
+                success = true;
+                break;
             }
         }
 
-        // 根据游走路径推断社区结构
-        for (const auto& pair : nodeWalks) {
-            int mostCommonWalk = 0;
-            int maxCount = 0;
-            for (int walk : pair.second) {
-                int count = std::count(nodeWalks[pair.first].begin(), nodeWalks[pair.first].end(), walk);
-                if (count > maxCount) {
-                    maxCount = count;
-                    mostCommonWalk = walk;
+        if (!success)
+            break;
+
+        for (int i = 0;i < current_ppi.proteins.size();i++)
+        {
+            if (find(current_ppi.proteins[i]->id) == current_ppi.proteins[location]->id)
+            {
+                new_ppi.proteins.push_back(current_ppi.proteins[i]);
+                protein_set.insert(current_ppi.proteins[i]);
+            }
+        }
+
+        vector<vector<bool>> visited(5000, vector<bool>(5000, false));
+
+        for (Edge* edge : current_ppi.set_edges) {
+            if (protein_set.count(edge->node_a) && protein_set.count(edge->node_b)) {
+                if (!visited[edge->node_a->id][edge->node_b->id]) {
+                    new_ppi.edges.push_back(edge);
+                    visited[edge->node_a->id][edge->node_b->id] = true;
+                    visited[edge->node_b->id][edge->node_a->id] = true;
                 }
             }
-            communities[pair.first] = mostCommonWalk;
         }
-
-        return communities;
+//        if(new_ppi.proteins.size() >= 3){
+//            ppi_queue.push(new_ppi);
+//            std::cout << new_ppi.proteins.size() << "\t" << new_ppi.edges.size() << endl;
+//        }
+        ppi_queue.push(new_ppi);
     }
-};
+}
 
 
-int main() {
-    UnGraph g;
+void write(vector<SubPPI>& splitted_ppi) {
+    vector<set<Protein*>> complexes;
+    for(auto& s:splitted_ppi) {
+        if (s.proteins.size() >= 3) {
+            set<Protein *> complex(s.proteins.begin(), s.proteins.end());
+            complexes.emplace_back(complex);
+        } else if (s.proteins.size() == 2) {
+            set<Protein *> complex(s.proteins.begin(), s.proteins.end());
+            for (auto &p: s.proteins) {
+                for (auto &nei: p->neighbor) {
+                    complex.insert(nei);
+                }
+            }
+            complexes.emplace_back(complex);
+        } else if (s.proteins.size() == 1) {
+            set<Protein*> complex;
+            complex.insert(s.proteins[0]);
+            for(auto& nei: s.proteins[0]->neighbor) {
+                complex.insert(nei);
+            }
+            complexes.emplace_back(complex);
+        }
+    }
+    ofstream file("~/code/complex_predict/evaluation/resdd.txt");
+    for(auto& complex: complexes) {
+        for(auto& p: complex) {
+            file << p->protein_name << "\t";
+        }
+        file << endl;
+    }
+    file.close();
+}
+
+void process_dataset(string ppi_file, string result_file, string temp, int i) {
+    UnGraph g(ppi_file);
     RandomWalk rw(&g);
-    CommunityDetection cd(g, rw);
     BioInformation bio;
     DAG dag;
-
     g.weight_by_go_term(bio, dag);
     vector<vector<double>> probability;
     g.calculate_walk_probability(probability);
     for(auto& node: g.proteins) {
         rw.walk_N2(node->id, probability);
     }
+    string temp_ppi = "/home/jh/code/complex_predict/" + temp + to_string(i);
 
-    SubPPI subppi;
-    subppi.edges = g.edges;
-    vector<Protein*> proteins(g.proteins.begin(), g.proteins.end());
-    subppi.proteins = proteins;
-//    subppi.edges[3]->visited_count = 10;
-//    subppi.edges[45]->visited_count = 100;
-//    subppi.edges[43]->visited_count = 90;
-
-    queue<SubPPI> q;
-    q.push(subppi);
-    vector<SubPPI> s;
-    if(!q.empty()) {
-        g.split_graph(g, q, s);
+    ofstream file(temp_ppi);
+    if(!file.is_open()) {
+        cout << "Failed to open file!" << endl;
     }
-    int i = 0;
-    std::cout << "split: "<< q.size() << endl;
-//    while(!q.empty()) {
-//        SubPPI p = q.front();
-//        q.pop();
-//        std::cout << ++i << " proteins: " << p.proteins.size() << "\t edges: " << p.edges.size() << endl;
-//    }
-//    vector<vector<double>> probability;
-//    g.calculate_walk_probability(probability);
-//    std::cout << "YOL146W:" << endl;
-//    Protein* node = g.ID2Protein[g.protein_name_id["YOL146W"]];
-//    double sum = 0.0;
-//    for(auto& neighbor: node->neighbor) {
-//        std::cout << "YOL146W --> " << neighbor->protein_name << " : " << probability[node->id][neighbor->id] << "\t" << probability[neighbor->id][node->id] << endl;
-//        sum += probability[node->id][neighbor->id];
-//    }
-//
-//    rw.walk_N2(node->id, probability);
+    for(auto& e: g.edges) {
+        file << e->node_a->protein_name << "\t" << e->node_b->protein_name << "\t" << e->visited_count << endl;
+    }
+    file.close();
+    file.flush();
+    vector<Result> complexes = bops(temp_ppi);
+    write_proteins(complexes, result_file + to_string(i));
+}
 
-//    set<Protein*> nei_n2;
-//    for(auto& n: node->neighbor) {
-//        nei_n2.insert(n);
-//        for(auto& n2: n->neighbor) {
-//            nei_n2.insert(n2);
-//        }
-//    }
-//    for(auto& n: nei_n2) {
-//        std::cout << n->protein_name << "\t";
-//    }
-//    std::cout << std::endl;
-//
-//    vector<double> av_attractions;
-//    g.calculate_average_attraction(av_attractions);
-//    std::cout << node->protein_name << "\t" << av_attractions[node->id] << endl;
-//    for(auto& neighbor: node->neighbor) {
-//        std::cout << neighbor->protein_name << "\t" << av_attractions[neighbor->id] << endl;
-//        sum += probability[node->id][neighbor->id];
-//    }
+int main() {
+//    vector<string> dataset{COLLINS_PPI, GAVIN_PPI, KROGAN_CORE_PPI, KROGAN_EXTENDED_PPI, BIOGRID_PPI};
+//    vector<string> result {COLLINS_RESULT, GAVIN_RESULT, KROGAN_CORE_RESULT, KROGAN_EXTENDED_RESULT, BIOGRID_RESULT};
+//    vector<string> temp{"collins", "gavin", "krogan_core", "krogan_extended", "biogrid"};
+//    vector<string> dataset{GAVIN_PPI};
+//    vector<string> result {GAVIN_RESULT};
+//    vector<string> temp{"gavin"};
 
+//    std::vector<std::thread> threads;
+//    pthread_attr_t attr;
+//    pthread_attr_init(&attr);
+//    size_t stackSize = 500 * 1024 * 1024;  // 设置线程堆栈大小为500MB
+//    pthread_attr_setstacksize(&attr, stackSize);
+//    for(int i = 0; i < dataset.size(); ++i) {
+//        threads.emplace_back(process_dataset, dataset[i], result[i], temp[i]);
+//    }
+//    for(auto& thread: threads){
+//        thread.join();
+//    }
+    for(int i = 0; i < 20; ++i) {
+//        process_dataset(COLLINS_PPI, COLLINS_RESULT, "collins", i);
+        process_dataset(BIOGRID_PPI, BIOGRID_RESULT, "biogrid", i);
+    }
     return 0;
 }
+

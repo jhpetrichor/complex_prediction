@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../bin/randomwalk"
-  "../bin/randomwalk.pdb"
+  "/home/jh/Desktop/complex_predict/bin/randomwalk"
+  "/home/jh/Desktop/complex_predict/bin/randomwalk.pdb"
   "CMakeFiles/randomwalk.dir/src/lib/bio_information.cpp.o"
   "CMakeFiles/randomwalk.dir/src/lib/bio_information.cpp.o.d"
   "CMakeFiles/randomwalk.dir/src/lib/dag.cpp.o"

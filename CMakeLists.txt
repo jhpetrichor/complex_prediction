@@ -9,39 +9,30 @@ include_directories(./include)
 set(SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 file(GLOB SOURCES ${SOURCE_DIR}/*.cpp) # This line is not needed if you list your sources explicitly
 
-# List your source files explicitly here
-add_executable(bops
-        ${SOURCE_DIR}/lib/graph.cpp
-        ${SOURCE_DIR}/lib/bio_information.cpp
-        ${SOURCE_DIR}/lib/dag.cpp
-        ${SOURCE_DIR}/bops.cpp
-        src/lib/main.cpp
-)
-
-add_executable(cns
-        ${SOURCE_DIR}/lib/ungraph.cpp
-        ${SOURCE_DIR}/lib/bio_information.cpp
-        ${SOURCE_DIR}/lib/dag.cpp
-        ${SOURCE_DIR}/cns.cpp
-)
-
-add_executable(new_cns
-        ${SOURCE_DIR}/lib/ungraph.cpp
-        ${SOURCE_DIR}/lib/bio_information.cpp
-        ${SOURCE_DIR}/lib/dag.cpp
-        ${SOURCE_DIR}/new_cns.cpp
-)
-
-add_executable(max_matched
-        ${SOURCE_DIR}/lib/ungraph.cpp
-        ${SOURCE_DIR}/lib/bio_information.cpp
-        ${SOURCE_DIR}/lib/dag.cpp
-        ${SOURCE_DIR}/max_matched.cpp
-)
-
 add_executable(randomwalk
         ${SOURCE_DIR}/lib/ungraph.cpp
         ${SOURCE_DIR}/lib/bio_information.cpp
         ${SOURCE_DIR}/lib/dag.cpp
         ${SOURCE_DIR}/randomwalk.cpp
+)
+
+add_executable(randomwalk2
+        ${SOURCE_DIR}/lib/ungraph.cpp
+        ${SOURCE_DIR}/lib/bio_information.cpp
+        ${SOURCE_DIR}/lib/dag.cpp
+        ${SOURCE_DIR}/randomwalk2.cpp
+)
+
+add_executable(random_core
+        ${SOURCE_DIR}/lib/ungraph.cpp
+        ${SOURCE_DIR}/lib/bio_information.cpp
+        ${SOURCE_DIR}/lib/dag.cpp
+        ${SOURCE_DIR}/random_core.cpp
+)
+
+add_executable(new_delete
+        ${SOURCE_DIR}/lib/ungraph.cpp
+        ${SOURCE_DIR}/lib/bio_information.cpp
+        ${SOURCE_DIR}/lib/dag.cpp
+        src/new_delete.cpp
 )

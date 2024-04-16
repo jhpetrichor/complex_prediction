@@ -26,6 +26,22 @@ void write_protein_complexes_to_file(string file_path, vector<set<string>>& comp
     file.close();
 }
 
+void write_protein_complexes_to_file(string file_path, vector<set<Protein*>>& complexes) {
+    ofstream file(file_path);
+    if(!file.is_open()) {
+        std::cerr << "Failed to open file! " << file_path << endl;
+        exit(1);
+    }
+
+    for(auto& complex: complexes) {
+        for(auto& protein: complex){
+            file << protein->protein_name << "\t";
+        }
+        file << std::endl;
+    }
+    file.close();
+}
+
 void read_complex(set<set<string>>& complexes) {
     fstream file(COMPLEX_FILE);
     if(!file.is_open()) {
@@ -46,22 +62,20 @@ void read_complex(set<set<string>>& complexes) {
     file.close();
 }
 
-template<typename T>
-bool complex_mathched(set<T>& a, set<T>& b) {
-    set<T> common;
+bool complex_mathched(const set<Protein*>& a, const set<Protein*>& b) {
+    set<Protein*> common;
     set_intersection(a.begin(), a.end(), b.begin(), b.end(), inserter(common, common.begin()));
-    return (double)common.size() / max(a.size(), b.size()) > MATCH_INDEX;
+    return (double)common.size() / std::max(a.size(), b.size()) > 0.65;
 }
 
 // 大于阈值的则不应该保留
-template<typename T>
-void update_complexes(set<set<T>>& complexes, set<T>& complex) {
-    for(auto& c: complex) {
+void update_complexes(vector<set<Protein*>>& complexes, set<Protein*>& complex) {
+    for(auto& c: complexes) {
         if(complex_mathched(c, complex)) {
             return;
         }
     }
-    complexes.insert(complex);
+    complexes.emplace_back(std::move(complex));
 }
 
 

@@ -573,7 +573,7 @@ vector<Result> get_result(PPI &Current_ppi,double Similarity_threshold) {
     
     Ppi_queue.push(Current_ppi);
     while (!Ppi_queue.empty()) {
-		split_ppi(Ppi_queue,Splitting_ppi);     
+		split_ppi(Ppi_queue, Splitting_ppi);     
     }
 
     vector<Result> result;
