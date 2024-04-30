@@ -1,6 +1,4 @@
-/home/jh/Desktop/complex_predict/build/CMakeFiles/randomwalk.dir
-/home/jh/Desktop/complex_predict/build/CMakeFiles/randomwalk2.dir
-/home/jh/Desktop/complex_predict/build/CMakeFiles/random_core.dir
-/home/jh/Desktop/complex_predict/build/CMakeFiles/new_delete.dir
-/home/jh/Desktop/complex_predict/build/CMakeFiles/edit_cache.dir
-/home/jh/Desktop/complex_predict/build/CMakeFiles/rebuild_cache.dir
+/home/jh/code/complex_predict/build/CMakeFiles/cpdp.dir
+/home/jh/code/complex_predict/build/CMakeFiles/test.dir
+/home/jh/code/complex_predict/build/CMakeFiles/edit_cache.dir
+/home/jh/code/complex_predict/build/CMakeFiles/rebuild_cache.dir

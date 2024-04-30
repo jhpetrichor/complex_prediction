@@ -8,251 +8,147 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/code/complex_predict/cmake-build-debug"/>
+				<Option working_dir="/home/jh/code/complex_predict/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="randomwalk">
-				<Option output="D:/code/complex_predict/bin/randomwalk.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
+			<Target title="cpdp">
+				<Option output="/home/jh/code/complex_predict/lib/libcpdp.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/code/complex_predict/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/code/complex_predict/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpdp"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpdp/fast">
+				<Option output="/home/jh/code/complex_predict/lib/libcpdp.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/code/complex_predict/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/code/complex_predict/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpdp/fast"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option output="/home/jh/code/complex_predict/bin/test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/code/complex_predict/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/home/jh/code/complex_predict/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 randomwalk"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="randomwalk/fast">
-				<Option output="D:/code/complex_predict/bin/randomwalk.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
+			<Target title="test/fast">
+				<Option output="/home/jh/code/complex_predict/bin/test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/code/complex_predict/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/home/jh/code/complex_predict/include"/>
+					<Add directory="/usr/include/c++/11"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
+					<Add directory="/usr/include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 randomwalk/fast"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="randomwalk2">
-				<Option output="D:/code/complex_predict/bin/randomwalk2.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 randomwalk2"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="randomwalk2/fast">
-				<Option output="D:/code/complex_predict/bin/randomwalk2.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 randomwalk2/fast"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="random_core">
-				<Option output="D:/code/complex_predict/bin/random_core.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 random_core"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="random_core/fast">
-				<Option output="D:/code/complex_predict/bin/random_core.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 random_core/fast"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="new_delete">
-				<Option output="D:/code/complex_predict/bin/new_delete.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_delete"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="new_delete/fast">
-				<Option output="D:/code/complex_predict/bin/new_delete.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/code/complex_predict/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="D:/code/complex_predict/./include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="D:/APP/CLion 2024.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 new_delete/fast"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 test/fast"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="D:/code/complex_predict/cmake-build-debug"/>
+				<Option working_dir="/home/jh/code/complex_predict/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/code/complex_predict/cmake-build-debug"/>
+				<Option working_dir="/home/jh/code/complex_predict/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/APP/CLion 2024.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/jh/code/complex_predict/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/code/complex_predict/src/lib/bio_information.cpp">
-			<Option target="randomwalk"/>
-			<Option target="randomwalk2"/>
-			<Option target="random_core"/>
-			<Option target="new_delete"/>
+		<Unit filename="/home/jh/code/complex_predict/src/lib/bio_information.cpp">
+			<Option target="cpdp"/>
 		</Unit>
-		<Unit filename="D:/code/complex_predict/src/lib/dag.cpp">
-			<Option target="randomwalk"/>
-			<Option target="randomwalk2"/>
-			<Option target="random_core"/>
-			<Option target="new_delete"/>
+		<Unit filename="/home/jh/code/complex_predict/src/lib/dag.cpp">
+			<Option target="cpdp"/>
 		</Unit>
-		<Unit filename="D:/code/complex_predict/src/lib/ungraph.cpp">
-			<Option target="randomwalk"/>
-			<Option target="randomwalk2"/>
-			<Option target="random_core"/>
-			<Option target="new_delete"/>
+		<Unit filename="/home/jh/code/complex_predict/src/lib/gene_express.cpp">
+			<Option target="cpdp"/>
 		</Unit>
-		<Unit filename="D:/code/complex_predict/src/new_delete.cpp">
-			<Option target="new_delete"/>
+		<Unit filename="/home/jh/code/complex_predict/src/lib/graph.cpp">
+			<Option target="cpdp"/>
 		</Unit>
-		<Unit filename="D:/code/complex_predict/src/random_core.cpp">
-			<Option target="random_core"/>
+		<Unit filename="/home/jh/code/complex_predict/src/lib/ungraph.cpp">
+			<Option target="cpdp"/>
 		</Unit>
-		<Unit filename="D:/code/complex_predict/src/randomwalk.cpp">
-			<Option target="randomwalk"/>
+		<Unit filename="/home/jh/code/complex_predict/src/test.cpp">
+			<Option target="test"/>
 		</Unit>
-		<Unit filename="D:/code/complex_predict/src/randomwalk2.cpp">
-			<Option target="randomwalk2"/>
-		</Unit>
-		<Unit filename="D:/code/complex_predict/CMakeLists.txt">
+		<Unit filename="/home/jh/code/complex_predict/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
