@@ -1,3 +1,9 @@
+/*
+ * @Description: 
+ * @Author: jh
+ * @Date: 2024-04-30 17:11:48
+ * @LastEditTime: 2024-05-01 22:49:26
+ */
 #include "gene_express.h"
 #include "ungraph.h"
 
@@ -89,12 +95,12 @@ std::vector<UnGraph> GeneExpress::build_dynamic_PPI(const UnGraph* g, DPIN_MEHTO
     switch(method) {
         case DPIN_MEHTOD::THREE_SIGMA: {
             auto active = activate_by_three_sigma();
-            return build_dynamic_PPI_by_active(g, active, 36);
+            return std::move(build_dynamic_PPI_by_active(g, active, 36));
             break;
         }
         case DPIN_MEHTOD::TOP: {
             auto active = active_by_top();
-            return build_dynamic_PPI_by_active(g, active, 36);
+            return std::move(build_dynamic_PPI_by_active(g, active, 36));
             break;
         }
         case DPIN_MEHTOD::TIME:
@@ -137,11 +143,14 @@ std::vector<UnGraph> GeneExpress::build_dynamic_PPI_by_active(const UnGraph* g, 
             }
         }
     }
-
+    std::cout << "aaa" << endl;
     for(int i = 0; i < count; ++i) {
         UnGraph g(std::move(set_proteins[i]), std::move(list_edges[i]));
+        std::cout << g.proteins.size() << "\t" << g.edges.size() << std::endl;
         dpins[i] = std::move(g);
     }
+
+    return std::move(dpins);
 }
 
 std::vector<UnGraph> GeneExpress::build_dynamic_PPI_by_time(const UnGraph* g, std::map<std::string, double>& active, int count) {

@@ -11,32 +11,38 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <memory>
 
-class Protein{
+class Protein {
 public:
     int id;
     std::string protein_name;
-    std::set<Protein*> neighbor;   // 指向邻居蛋白质
+    std::set<std::shared_ptr<Protein>> neighbor;
     double weight;
+
 public:
-    Protein(int, std::string, double _weight = 0.0);
-    void add_neighbor(Protein* protein);
-    void remove_neighbor(Protein* _protein);
+    Protein(int _id, std::string _protein_name, double _weight = 0.0);
+
+    void add_neighbor(std::shared_ptr<Protein> protein);
+
+    void remove_neighbor(std::shared_ptr<Protein> protein);
     int degree() const;
-    static bool ProteinCompareByWeight(const Protein* p1, const Protein* p2);
+
+    static bool ProteinCompareByWeight(const std::shared_ptr<Protein> p1, const std::shared_ptr<Protein> p2);
 };
+
 
 class Edge {
 public:
     explicit Edge(Edge *pEdge);
 
-    Protein* node_a;
-    Protein* node_b;
+    std::shared_ptr<Protein> node_a;
+    std::shared_ptr<Protein> node_b;
     double weight;
     double balanced_weight;
     double visited_count;   // 访问次数
 
-    Edge(Protein* node_a, Protein* node_b, double _weight = 0.0, double _balanced_weight = 0.0, int _visited_count = 0);
+    Edge(std::shared_ptr<Protein> node_a, std::shared_ptr<Protein> node_b, double _weight = 0.0, double _balanced_weight = 0.0, int _visited_count = 0);
     bool operator<(const Edge&)const;
 };
 
@@ -44,11 +50,11 @@ struct SubPPI;
 
 class UnGraph {
 public:
-    std::vector<Protein*> ID2Protein;
-    std::map<Protein*, int> Protein2ID;
+    std::vector<std::shared_ptr<Protein>> ID2Protein;
+    std::map<std::shared_ptr<Protein>, int> Protein2ID;
     std::map<std::string, int> protein_name_id;
-    std::set<Protein*> proteins;
-    std::vector<Edge*> edges;
+    std::set<std::shared_ptr<Protein>> proteins;
+    std::vector<std::shared_ptr<Edge>> edges;
     std::vector<std::vector<bool>> connected;    // 存储个节点是否直接相连
 
     std::map<std::set<std::string>, int> Edge2ID;
@@ -66,9 +72,9 @@ public:
     UnGraph() = default;
     ~UnGraph();
     void display() const;
-    Edge* getEdge(const Protein* protein1, const Protein* protein2);
+    shared_ptr<Edge> getEdge(const std::shared_ptr<Protein> protein1, const std::shared_ptr<Protein> protein2);
 
-    double agglomeration_coefficient(const vector<Protein*>& nodes);
+    double agglomeration_coefficient(const vector<std::shared_ptr<Protein>> nodes);
     void weight_by_go_term(BioInformation& bio, DAG& dag);
     void calculate_balanced_weight();
 
@@ -97,20 +103,20 @@ public:
 //    void
 private:
     void read_edge_list(std::string, std::set<std::string>&, std::vector<std::string>&);
-    void add_edge(Protein*, Protein*);
+    void add_edge(shared_ptr<Protein>, shared_ptr<Protein>);
 
-    static bool compare_pairs(const pair<Edge*, int>& pair1, const pair<Edge*, int>& pair);
+    static bool compare_pairs(const pair<std::shared_ptr<Edge>, int>& pair1, const pair<std::shared_ptr<Edge>, int>& pair);
 };
 
-struct SubPPI {
-    vector<Protein*> proteins;
-    vector<Edge*>     edges;    // 边对应的访问次数
-    set<Edge*>        set_edges;
+// struct SubPPI {
+//     vector<Protein*> proteins;
+//     vector<Edge*>     edges;    // 边对应的访问次数
+//     set<Edge*>        set_edges;
 
-    static bool CompareByVisitedCount(const Edge* edge1, const Edge* edge2) {
-        return edge1->visited_count < edge2->visited_count;
-    }
+//     static bool CompareByVisitedCount(const Edge* edge1, const Edge* edge2) {
+//         return edge1->visited_count < edge2->visited_count;
+//     }
 
-//    void remove_edge(Protein* a, Protein* b);
-};
+// //    void remove_edge(Protein* a, Protein* b);
+// };
 #endif //COMPLEX_PREDICT_UDGRAPH_H

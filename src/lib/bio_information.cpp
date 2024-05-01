@@ -1,3 +1,9 @@
+/*
+ * @Description: 
+ * @Author: jh
+ * @Date: 2024-04-30 17:11:48
+ * @LastEditTime: 2024-05-01 22:07:55
+ */
 #include "../../include/bio_information.h"
 
 BioInformation::BioInformation() {

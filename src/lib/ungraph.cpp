@@ -1,6 +1,7 @@
 #include "ungraph.h"
 
 #include <cassert>
+#include <memory>
 
 Protein::Protein(int idx, std::string _protein_name, double _weight) {
     id = idx;
@@ -8,17 +9,17 @@ Protein::Protein(int idx, std::string _protein_name, double _weight) {
     weight = _weight;
 }
 
-void Protein::add_neighbor(Protein* _protein) {
+void Protein::add_neighbor(std::shared_ptr<Protein> _protein) {
     if(!_protein) {
         std::cerr << "Protein not founded!" << std::endl;
         return;
     }
 
-    if(_protein == this) return;
+    if(_protein->protein_name == this->protein_name) return;
     neighbor.insert(_protein);
 }
 
-void Protein::remove_neighbor(Protein* _protein) {
+void Protein::remove_neighbor(std::shared_ptr<Protein> _protein) {
     if(!_protein) {
         std::cerr << "Protein not founded!" << std::endl;
         return;
@@ -30,11 +31,11 @@ int Protein::degree() const {
     return (int)neighbor.size();
 }
 
-bool Protein::ProteinCompareByWeight(const Protein* p1, const Protein* p2){
+bool Protein::ProteinCompareByWeight(const std::shared_ptr<Protein> p1, const std::shared_ptr<Protein> p2){
     return p1->weight < p2->weight;
 }
 
-Edge::Edge(Protein* _node_a, Protein* _node_b, double _weight, double _balanced_weight, int _visited_count) {
+Edge::Edge(std::shared_ptr<Protein> _node_a, std::shared_ptr<Protein> _node_b, double _weight, double _balanced_weight, int _visited_count) {
     if(!_node_a || !_node_b) {
         std::cerr << "Node not found!" << std::endl;
         return;
@@ -70,7 +71,7 @@ UnGraph::UnGraph(string ppi_file) {
     int idx = 0;
     for(auto& p: protein_list) {
         protein_name_id[p] = idx;
-        Protein* new_protein = new Protein(idx, p);
+        shared_ptr<Protein> new_protein(new Protein(idx, p));
         proteins.insert(new_protein);
         Protein2ID[new_protein] = idx;
         ID2Protein[idx] = new_protein;
@@ -79,8 +80,8 @@ UnGraph::UnGraph(string ppi_file) {
 
     // 添加边
     for(int i= 0; i < edge_list.size(); i+=2) {
-        Protein* protein_a = ID2Protein[protein_name_id[edge_list[i]]];
-        Protein* protein_b = ID2Protein[protein_name_id[edge_list[i+1]]];
+        auto protein_a = ID2Protein[protein_name_id[edge_list[i]]];
+        auto protein_b = ID2Protein[protein_name_id[edge_list[i+1]]];
         connected[protein_a->id][protein_b->id] = true;
         protein_a->add_neighbor(protein_b);
         protein_b->add_neighbor(protein_a);
@@ -109,7 +110,7 @@ UnGraph::UnGraph(std::set<std::string>&& set_proteins, std::vector<std::string>&
     connected.resize(set_proteins.size(), vector<bool>(set_proteins.size(), false));
     // update node
     for(auto& protein_name: set_proteins) {
-        auto protein = new Protein(proteins.size(), protein_name);
+        shared_ptr<Protein> protein(new Protein(proteins.size(), protein_name));
         ID2Protein[proteins.size()] = protein;  // ID2Protein
         Protein2ID[protein] = proteins.size();  // Protein2ID
         protein_name_id[protein_name] = proteins.size();  // protein_name_id
@@ -124,16 +125,14 @@ UnGraph::UnGraph(std::set<std::string>&& set_proteins, std::vector<std::string>&
 }
 
 UnGraph::~UnGraph() {
-    for(auto& _protein: proteins) {
-        if (_protein) {
-            delete _protein;
-        }
-    }
-    for(auto& _edge: edges) {
-        if(_edge){
-            delete _edge;
-        }
-    }
+    // 清空容器
+    ID2Protein.clear();
+    Protein2ID.clear();
+    protein_name_id.clear();
+    proteins.clear();
+    edges.clear();
+    connected.clear();
+    Edge2ID.clear();
 }
 
 void UnGraph::display() const {
@@ -180,7 +179,7 @@ void UnGraph::read_edge_list(std::string file_path, std::set<std::string>& proei
     file.close();
 }
 
-void UnGraph::add_edge(Protein* protein_a, Protein* protein_b) {
+void UnGraph::add_edge(std::shared_ptr<Protein> protein_a, shared_ptr<Protein> protein_b) {
     if(!protein_a || !protein_b) {
         std::cerr << "Protein not founded!" << std::endl;
         return;
@@ -199,7 +198,7 @@ void UnGraph::add_edge(Protein* protein_a, Protein* protein_b) {
     Edge2ID.insert(std::make_pair(std::move(e_set),  Edge2ID.size()));
 }
 
-Edge* UnGraph::getEdge(const Protein* protein_a, const Protein* protein_b) {
+std::shared_ptr<Edge> UnGraph::getEdge(const std::shared_ptr<Protein> protein_a, const std::shared_ptr<Protein> protein_b) {
     std::set<std::string> e = {protein_a->protein_name, protein_b->protein_name};
     auto edge_it = Edge2ID.find(e);
     if(edge_it == Edge2ID.end()) {
@@ -224,7 +223,7 @@ void UnGraph::weight_by_go_term(BioInformation& bio, DAG& dag) {
 }
 
 // 直接算两个或者更多的节点
-double UnGraph::agglomeration_coefficient(const vector<Protein*>& nodes){
+double UnGraph::agglomeration_coefficient(const vector<shared_ptr<Protein>> nodes){
     int edge_count = 0;
     for(auto node1 =  nodes.begin(); node1 != nodes.end(); node1++) {
         for(auto node2 = std::next(node1); node2 != nodes.end(); node2++) {
@@ -278,7 +277,7 @@ void UnGraph::get_common_neighbor_size(vector<vector<int>>& common_size) {
     common_size.resize(ID2Protein.size(), vector<int>(ID2Protein.size(), 0));
     for(auto it1 = proteins.begin(); it1 != proteins.end(); ++it1) {
         for(auto it2 = std::next(it1); it2 != proteins.end(); ++it2) {
-            vector<Protein*> common;
+            vector<shared_ptr<Protein>> common;
             set_intersection((*it1)->neighbor.begin(), (*it1)->neighbor.end(),
                              (*it2)->neighbor.begin(), (*it2)->neighbor.end(),
                              inserter(common, common.begin()));
@@ -303,12 +302,12 @@ void UnGraph::get_CNS(vector<vector<double>>& CNS, const vector<vector<double>>&
     CNS.resize(ID2Protein.size(), vector<double>(ID2Protein.size(), 0));
     for(auto it1 = proteins.begin(); it1 != proteins.end(); ++it1) {
         for(auto it2 = std::next(it1); it2 != proteins.end(); ++it2) {
-            vector<Protein*> common;
+            vector<shared_ptr<Protein>> common;
             set_intersection((*it1)->neighbor.begin(), (*it1)->neighbor.end(),
                              (*it2)->neighbor.begin(), (*it2)->neighbor.end(),
                              inserter(common, common.begin()));
             double cns = 0.0;
-            for(auto* neighbor: common) {
+            for(auto neighbor: common) {
                 cns += JCS[(*it1)->id][neighbor->id] + JCS[(*it2)->id][neighbor->id];
             }
             CNS[(*it1)->id][(*it2)->id] = cns;
@@ -399,79 +398,79 @@ vector<double> UnGraph::calculate_protein_weight() {
     return std::move(protein_weight);
 }
 
-void UnGraph::split_graph(queue<SubPPI>& ppi_queue, vector<SubPPI>& splited_ppi) {
-    SubPPI current_ppi = ppi_queue.front();
-    ppi_queue.pop();
-    if (current_ppi.proteins.size() <= 20) {
-        splited_ppi.emplace_back(current_ppi);
-        return;
-    }
+// void UnGraph::split_graph(queue<SubPPI>& ppi_queue, vector<SubPPI>& splited_ppi) {
+//     SubPPI current_ppi = ppi_queue.front();
+//     ppi_queue.pop();
+//     if (current_ppi.proteins.size() <= 20) {
+//         splited_ppi.emplace_back(current_ppi);
+//         return;
+//     }
 
-    map<int, int> parent;
-    for(auto & protein : current_ppi.proteins) {
-        parent[protein->id] = protein->id;
-    }
+//     map<int, int> parent;
+//     for(auto & protein : current_ppi.proteins) {
+//         parent[protein->id] = protein->id;
+//     }
 
-    sort(current_ppi.edges.begin(), current_ppi.edges.end(), SubPPI::CompareByVisitedCount);
+//     sort(current_ppi.edges.begin(), current_ppi.edges.end(), SubPPI::CompareByVisitedCount);
 
-    int count = 0;
-    for (Edge* edge : current_ppi.edges) {
-        int proteina = UnGraph::find_parent(edge->node_a->id, parent);
-        int proteinb = UnGraph::find_parent(edge->node_b->id, parent);
+//     int count = 0;
+//     for (Edge* edge : current_ppi.edges) {
+//         int proteina = UnGraph::find_parent(edge->node_a->id, parent);
+//         int proteinb = UnGraph::find_parent(edge->node_b->id, parent);
 
-        if (proteina == proteinb)
-            continue;
+//         if (proteina == proteinb)
+//             continue;
 
-        parent[proteina] = proteinb;
-        count += 1;
-        if(count == current_ppi.proteins.size() - 2) {
-            break;
-        }
-    }
-    int location = -1;
-    while (1) {
-        bool success = false;
-        SubPPI new_ppi;
-        set<Protein*> protein_set;
+//         parent[proteina] = proteinb;
+//         count += 1;
+//         if(count == current_ppi.proteins.size() - 2) {
+//             break;
+//         }
+//     }
+//     int location = -1;
+//     while (1) {
+//         bool success = false;
+//         SubPPI new_ppi;
+//         set<Protein*> protein_set;
 
-        for(int i = location + 1; i < current_ppi.proteins.size(); ++i) {
-            int protein_a = current_ppi.proteins[i]->id;
-            if(UnGraph::find_parent(protein_a, parent) == protein_a) {
-                location = i;
-                success = true;
-                break;
-            }
-        }
+//         for(int i = location + 1; i < current_ppi.proteins.size(); ++i) {
+//             int protein_a = current_ppi.proteins[i]->id;
+//             if(UnGraph::find_parent(protein_a, parent) == protein_a) {
+//                 location = i;
+//                 success = true;
+//                 break;
+//             }
+//         }
 
-        if (!success)
-            break;
+//         if (!success)
+//             break;
 
-        for (int i = 0;i < current_ppi.proteins.size();i++)
-        {
-            if (UnGraph::find_parent(current_ppi.proteins[i]->id, parent) == current_ppi.proteins[location]->id)
-            {
-                new_ppi.proteins.push_back(current_ppi.proteins[i]);
-                protein_set.insert(current_ppi.proteins[i]);
-            }
-        }
+//         for (int i = 0;i < current_ppi.proteins.size();i++)
+//         {
+//             if (UnGraph::find_parent(current_ppi.proteins[i]->id, parent) == current_ppi.proteins[location]->id)
+//             {
+//                 new_ppi.proteins.push_back(current_ppi.proteins[i]);
+//                 protein_set.insert(current_ppi.proteins[i]);
+//             }
+//         }
 
-        for (Edge* edge : current_ppi.edges) {
-            if (protein_set.count(edge->node_a) && protein_set.count(edge->node_b)) {
-                new_ppi.edges.push_back(edge);
-            }
-        }
-//        for(int i = 0; i < current_ppi.edges.size() - 1; ++i) {
-//            if (protein_set.count(current_ppi.edges[i]->node_a) && protein_set.count(current_ppi.edges[i]->node_b)) {
-//                new_ppi.edges.push_back(current_ppi.edges[i]);
-//            }
-//        }
-        if(new_ppi.proteins.size() >= 3){
-            ppi_queue.push(new_ppi);
-            std::cout << new_ppi.proteins.size() << "\t" << new_ppi.edges.size() << endl;
-        }
-    }
-}
+//         for (Edge* edge : current_ppi.edges) {
+//             if (protein_set.count(edge->node_a) && protein_set.count(edge->node_b)) {
+//                 new_ppi.edges.push_back(edge);
+//             }
+//         }
+// //        for(int i = 0; i < current_ppi.edges.size() - 1; ++i) {
+// //            if (protein_set.count(current_ppi.edges[i]->node_a) && protein_set.count(current_ppi.edges[i]->node_b)) {
+// //                new_ppi.edges.push_back(current_ppi.edges[i]);
+// //            }
+// //        }
+//         if(new_ppi.proteins.size() >= 3){
+//             ppi_queue.push(new_ppi);
+//             std::cout << new_ppi.proteins.size() << "\t" << new_ppi.edges.size() << endl;
+//         }
+//     }
+// }
 
-bool UnGraph::compare_pairs(const pair<Edge*, int>& pair1, const pair<Edge*, int>& pair2) {
+bool UnGraph::compare_pairs(const pair<shared_ptr<Edge>, int>& pair1, const pair<shared_ptr<Edge>, int>& pair2) {
     return pair1.second > pair2.second;
 }

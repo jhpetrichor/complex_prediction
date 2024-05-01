@@ -3,7 +3,7 @@
  * @Author: jh
  * @Date: 2024-04-30 17:11:48
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-05-01 21:38:38
+ * @LastEditTime: 2024-05-01 22:15:29
  */
 
 #include "gene_express.h"
@@ -11,14 +11,12 @@
 
 int main() {
     UnGraph g(COLLINS_PPI);
-    std::cout << "ddd" << std::endl;
     GeneExpress gene_express(GENE_EXPRESSION);
-    std::cout << "ddd" << std::endl;
     auto dpins = gene_express.build_dynamic_PPI(&g, DPIN_MEHTOD::THREE_SIGMA);
-    std::cout << "ddd" << std::endl;
     std::cout << "dpins.size(): " << dpins.size() << std::endl;
-    for(int i = 0; i < dpins.size(); ++i) {
-        std::cout << "proteins: " << dpins[i].ID2Protein.size() << "\tedges: " << dpins[i].edges.size();
+    for(auto& d: dpins) {
+        std::cout << d.proteins.empty() << endl;
+        std::cout << "proteins: " << d.ID2Protein.size() << "\tedges: " << d.edges.size();
     }
 
     // std::set<string> nodes {"111", "222", "333", "444", "555"};
