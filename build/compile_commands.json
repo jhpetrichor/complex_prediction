@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/jh/code/complex_predict/build",
+  "command": "/usr/bin/g++ -Dcpdp_EXPORTS -I/home/jh/code/complex_predict/include -g -fPIC -std=gnu++14 -o CMakeFiles/cpdp.dir/src/lib/bio_information.cpp.o -c /home/jh/code/complex_predict/src/lib/bio_information.cpp",
+  "file": "/home/jh/code/complex_predict/src/lib/bio_information.cpp"
+},
+{
+  "directory": "/home/jh/code/complex_predict/build",
+  "command": "/usr/bin/g++ -Dcpdp_EXPORTS -I/home/jh/code/complex_predict/include -g -fPIC -std=gnu++14 -o CMakeFiles/cpdp.dir/src/lib/dag.cpp.o -c /home/jh/code/complex_predict/src/lib/dag.cpp",
+  "file": "/home/jh/code/complex_predict/src/lib/dag.cpp"
+},
+{
+  "directory": "/home/jh/code/complex_predict/build",
+  "command": "/usr/bin/g++ -Dcpdp_EXPORTS -I/home/jh/code/complex_predict/include -g -fPIC -std=gnu++14 -o CMakeFiles/cpdp.dir/src/lib/gene_express.cpp.o -c /home/jh/code/complex_predict/src/lib/gene_express.cpp",
+  "file": "/home/jh/code/complex_predict/src/lib/gene_express.cpp"
+},
+{
+  "directory": "/home/jh/code/complex_predict/build",
+  "command": "/usr/bin/g++ -Dcpdp_EXPORTS -I/home/jh/code/complex_predict/include -g -fPIC -std=gnu++14 -o CMakeFiles/cpdp.dir/src/lib/graph.cpp.o -c /home/jh/code/complex_predict/src/lib/graph.cpp",
+  "file": "/home/jh/code/complex_predict/src/lib/graph.cpp"
+},
+{
+  "directory": "/home/jh/code/complex_predict/build",
+  "command": "/usr/bin/g++ -Dcpdp_EXPORTS -I/home/jh/code/complex_predict/include -g -fPIC -std=gnu++14 -o CMakeFiles/cpdp.dir/src/lib/ungraph.cpp.o -c /home/jh/code/complex_predict/src/lib/ungraph.cpp",
+  "file": "/home/jh/code/complex_predict/src/lib/ungraph.cpp"
+},
+{
+  "directory": "/home/jh/code/complex_predict/build",
+  "command": "/usr/bin/g++  -I/home/jh/code/complex_predict/include -g -std=gnu++14 -o CMakeFiles/test.dir/src/test.cpp.o -c /home/jh/code/complex_predict/src/test.cpp",
+  "file": "/home/jh/code/complex_predict/src/test.cpp"
+}
+]

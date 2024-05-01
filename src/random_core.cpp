@@ -1,3 +1,12 @@
+/*
+ * @Description: 
+ * @Author: jh
+ * @Date: 2024-04-30 17:11:48
+ * @LastEditors: wuyue.nan
+ * @LastEditTime: 2024-05-01 16:24:17
+ */
+
+
 #include "../include/ungraph.h"
 
 #include <iostream>
@@ -50,8 +59,7 @@ public:
         }
         return neighbor[neighbor.size() - 1];
     }
-
-    // 在邻域为2的范围内随机游走
+   
     void walk_N2(int startNode, const vector<vector<double>>& probability) {
         std::vector<int> walk;   // 记录路径
         walk.push_back(startNode);

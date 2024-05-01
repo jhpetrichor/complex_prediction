@@ -1,4 +1,10 @@
-#include "../../include/graph.h"
+/*
+ * @Description: Protein, Edge, Protein等classs实现
+ * @Author: jh
+ * @Date: 2024-04-30 17:11:48
+ * @LastEditTime: 2024-05-01 18:13:29
+ */
+#include "graph.h"
 
 #include <algorithm>
 #include <cstdio>
@@ -628,77 +634,3 @@ void print_information(string Ppidata_file,string Result_file,double Balanced_in
 	printf("_________________________________________\n");
 	printf("It will takes tens of minutes.\n");
 }
-
-// int main(int argc, char *argv[]) {
-// 	double Balanced_index,Similarity_threshold = 0.45;
-// 	string Ppidata_file,Result_file;
-// 	PPI Original_ppi;
-	
-// 	Ppidata_file = argv[1];
-// 	Result_file = argv[2];
-// 	read_proteins(Original_ppi,Ppidata_file);
-// 	if (argc >= 4) {
-// 		sscanf(argv[3],"%lf",&Balanced_index);
-// 	} else {
-// 		Balanced_index = 1.5;
-// 	}
-	
-// 	print_information(Ppidata_file,Result_file,Balanced_index);
-//     get_balanced_interaction(Original_ppi,Balanced_index);
-//     write_proteins(get_result(Original_ppi,Similarity_threshold),Result_file);
-//     return 0;
-// }
-
-// int main(void) {
-// 	double Balanced_index = 1.5,  Similarity_threshold = 0.45;
-// 	string Ppidata_file,Result_file;
-// 	PPI Original_ppi;
-	
-// 	// Ppidata_file = "./ppi.txt";
-// 	Ppidata_file = "/home/jh/code/BOPS/dataset/collins.txt";
-// 	Result_file = "./result_delete.txt";
-// 	read_proteins_with_weight(Original_ppi,Ppidata_file);
-    
-
-//     std::cout << Id2protein.size() << std::endl;
-// 	BioInformation bio;
-//     std::cout << "before: " << Original_ppi.interaction.size() << std::endl;
-//     weight_interaction(Original_ppi, bio);
-//     // delete_interaction_by_pearson(Original_ppi, bio);
-//     std::cout << "after delete: " << Original_ppi.interaction.size() << std::endl;
-
-// 	map<int, set<int>> adjacency;
-//     std:cout << "get_adiacency..." << std::endl;
-// 	get_adjacency_list(Original_ppi,adjacency);
-//     std::cout << "get_hocn..." << std::endl;
-//     vector<vector<double>> weight(Id2protein.size()+1, vector<double>(Id2protein.size()+1, 0.0));
-//     get_hocn(Original_ppi, adjacency, weight);
-//     // get_quadrangle_weight(Original_ppi, adjacency, weight);
-//     // max_sms(Original_ppi, adjacency, weight);
-//     // double max = 0.0;
-//     // for(int i = 0; i < Original_ppi.interaction.size(); ++i){
-//     //     int protein1 = Original_ppi.interaction[i].proteina;
-//     //     int protein2 = Original_ppi.interaction[i].proteinb;
-//     //     // Original_ppi.interaction[i].interaction = Original_ppi.interaction[i].interaction + weight[protein1][protein2];
-//     //     if(max < weight[protein1][protein2]) max = weight[protein1][protein2];
-//     // }
-    
-//     for(int i = 0; i < Original_ppi.interaction.size(); ++i){
-//         int protein1 = Original_ppi.interaction[i].proteina;
-//         int protein2 = Original_ppi.interaction[i].proteinb;
-//         // Original_ppi.interaction[i].interaction = (Original_ppi.interaction[i].interaction + weight[protein1][protein2]) * 0.5;
-//         double score = (Original_ppi.interaction[i].interaction + weight[protein1][protein2]); 
-//         Original_ppi.interaction[i].interaction = score;
-//         std::cout <<Id2protein[protein1] << "\t" << Id2protein[protein2] << ":" << score << endl;
-    
-//         // Original_ppi.interaction[i].interaction = (Original_ppi.interaction[i].interaction + weight[protein1][protein2] / max) * 0.5;
-//     }
-//     //
-//     print_information(Ppidata_file, Result_file, Balanced_index);
-//     get_balanced_interaction(Original_ppi,Balanced_index);
-//     write_proteins(get_result(Original_ppi,Similarity_threshold),Result_file);
-
-
-//     return 0;
-// }
-

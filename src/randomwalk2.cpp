@@ -1,4 +1,5 @@
 #include "../include/ungraph.h"
+#include "../include/tools.h"
 
 #include <iostream>
 #include <vector>
@@ -7,7 +8,6 @@
 #include <ctime>
 #include <set>
 #include <algorithm>
-#include "../include/tools.h"
 #include <cstdlib>
 
 class RandomWalk {

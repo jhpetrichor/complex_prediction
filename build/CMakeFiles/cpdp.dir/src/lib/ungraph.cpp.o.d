@@ -1,9 +1,9 @@
 CMakeFiles/cpdp.dir/src/lib/ungraph.cpp.o: \
  /home/jh/code/complex_predict/src/lib/ungraph.cpp \
  /usr/include/stdc-predef.h \
- /home/jh/code/complex_predict/src/lib/../../include/ungraph.h \
- /home/jh/code/complex_predict/src/lib/../../include/config.h \
- /home/jh/code/complex_predict/src/lib/../../include/bio_information.h \
+ /home/jh/code/complex_predict/include/ungraph.h \
+ /home/jh/code/complex_predict/include/config.h \
+ /home/jh/code/complex_predict/include/bio_information.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -185,8 +185,8 @@ CMakeFiles/cpdp.dir/src/lib/ungraph.cpp.o: \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
- /home/jh/code/complex_predict/src/lib/../../include/dag.h \
- /usr/include/c++/11/queue /usr/include/c++/11/deque \
- /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
- /usr/include/c++/11/bits/stl_queue.h /usr/include/c++/11/stack \
- /usr/include/c++/11/bits/stl_stack.h
+ /home/jh/code/complex_predict/include/dag.h /usr/include/c++/11/queue \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
+ /usr/include/c++/11/stack /usr/include/c++/11/bits/stl_stack.h \
+ /usr/include/c++/11/cassert /usr/include/assert.h

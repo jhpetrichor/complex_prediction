@@ -1,4 +1,6 @@
-#include "../../include/ungraph.h"
+#include "ungraph.h"
+
+#include <cassert>
 
 Protein::Protein(int idx, std::string _protein_name, double _weight) {
     id = idx;
@@ -92,6 +94,35 @@ UnGraph::UnGraph(string ppi_file) {
     std::cout << "edge: " << edges.size() << std::endl;
 }
 
+    // std::vector<Protein*> ID2Protein;
+    // std::map<Protein*, int> Protein2ID;
+    // std::map<std::string, int> protein_name_id;
+    // std::set<Protein*> proteins;
+    // std::vector<Edge*> edges;
+    // std::vector<std::vector<bool>> connected;    // 存储个节点是否直接相连
+
+    // std::map<std::set<std::string>, int> Edge2ID;
+
+UnGraph::UnGraph(std::set<std::string>&& set_proteins, std::vector<std::string>&& list_edges) {
+    assert(list_edges.size() % 2 == 0);
+    ID2Protein.resize(set_proteins.size());
+    connected.resize(set_proteins.size(), vector<bool>(set_proteins.size(), false));
+    // update node
+    for(auto& protein_name: set_proteins) {
+        auto protein = new Protein(proteins.size(), protein_name);
+        ID2Protein[proteins.size()] = protein;  // ID2Protein
+        Protein2ID[protein] = proteins.size();  // Protein2ID
+        protein_name_id[protein_name] = proteins.size();  // protein_name_id
+        proteins.insert(protein);            //  Proteins
+    }
+
+    for(int i = 0; i < list_edges.size(); i += 2) {
+        auto protein_a = ID2Protein[protein_name_id[list_edges[i]]];
+        auto protein_b = ID2Protein[protein_name_id[list_edges[i+1]]];
+        add_edge(protein_a, protein_b);
+    } 
+}
+
 UnGraph::~UnGraph() {
     for(auto& _protein: proteins) {
         if (_protein) {
@@ -104,6 +135,32 @@ UnGraph::~UnGraph() {
         }
     }
 }
+
+void UnGraph::display() const {
+    std::cout << "protein_name_id: " << std::endl;
+    for(auto& it: protein_name_id) {
+        std::cout << it.second << "\t" << it.first << std::endl;
+    }
+
+    std::cout << "ID2Protein: " << std::endl;
+    for(int i = 0; i < ID2Protein.size(); ++i) {
+        std::cout << i << "\t" << ID2Protein[i]->protein_name << std::endl;
+    }
+
+    std::cout << "edges: " << endl;
+    for(auto& e: edges) {
+        std::cout << e->node_a->protein_name << "\t" << e->node_b->protein_name << endl;
+    }
+
+    std::cout << "edges_id" << std::endl;
+    for(auto& it: Edge2ID) {
+        for(auto& p: it.first) {
+            std::cout << p << "\t";
+        }
+        std::cout << it.second << endl;
+    }
+}
+
 
 void UnGraph::read_edge_list(std::string file_path, std::set<std::string>& proeins_list, std::vector<std::string>& edge_list) {
     std::fstream file(file_path);
@@ -132,7 +189,14 @@ void UnGraph::add_edge(Protein* protein_a, Protein* protein_b) {
         return;
     }
     protein_a->add_neighbor(protein_b);
-     protein_b->add_neighbor(protein_a);
+    protein_b->add_neighbor(protein_a);
+    connected[protein_a->id][protein_b->id] = true;
+    connected[protein_b->id][protein_a->id] = true;
+
+    auto e = new Edge(protein_a, protein_b);
+    edges.emplace_back(e);
+    std::set<std::string> e_set{protein_a->protein_name, protein_b->protein_name};
+    Edge2ID.insert(std::make_pair(std::move(e_set),  Edge2ID.size()));
 }
 
 Edge* UnGraph::getEdge(const Protein* protein_a, const Protein* protein_b) {
@@ -191,7 +255,7 @@ void UnGraph::calculate_balanced_weight() {
     }
 }
 
-__attribute__((unused)) void UnGraph::calculate_structure_similarty(vector<vector<double>>& ss_weight) {
+void UnGraph::calculate_structure_similarty(vector<vector<double>>& ss_weight) {
     ss_weight.resize(ID2Protein.size(), vector<double>(ID2Protein.size(), 0.0));
     vector<vector<int>> common_neighbor_size;
     get_common_neighbor_size(common_neighbor_size);

@@ -1,10 +1,9 @@
 CMakeFiles/cpdp.dir/src/lib/graph.cpp.o: \
  /home/jh/code/complex_predict/src/lib/graph.cpp \
- /usr/include/stdc-predef.h \
- /home/jh/code/complex_predict/src/lib/../../include/graph.h \
- /home/jh/code/complex_predict/src/lib/../../include/bio_information.h \
- /home/jh/code/complex_predict/src/lib/../../include/config.h \
- /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/stdc-predef.h /home/jh/code/complex_predict/include/graph.h \
+ /home/jh/code/complex_predict/include/bio_information.h \
+ /home/jh/code/complex_predict/include/config.h /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

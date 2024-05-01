@@ -1,4 +1,17 @@
 {
+    "fileheader.customMade": { //此为头部注释
+        "Description": "", // 文件描述
+        // "Version": "2.0", // 版本
+        "Author": "jh", // 文件作者
+        "Date": "Do not edit", // 文件创建时间(不变)
+        "LastEditTime": "Do not edit" // 文件最后编辑时间
+    },
+    "fileheader.cursorMode": { //此为函数注释
+        "description":"", // 功能描述
+        "param": "", // 传入参数
+        "return": "", // 返回结果
+        // "author":"wuyue.nan" // 函数作者
+    },
     "files.associations": {
         "ostream": "cpp",
         "iostream": "cpp",

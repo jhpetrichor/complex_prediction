@@ -1,5 +1,18 @@
+/*
+ * @Description: 
+ * @Author: jh
+ * @Date: 2024-04-30 17:11:48
+ * @LastEditors: wuyue.nan
+ * @LastEditTime: 2024-05-01 18:09:54
+ */
 #include "../../include/dag.h"
 
+/**
+ * @description: 
+ * @param {Node*} _ancestor
+ * @return {*}
+ * @author: wuyue.nan
+ */
 void Node::add(Node* _ancestor) {
     ancestor.insert(_ancestor);
 }
@@ -42,6 +55,7 @@ DAG::~DAG() {
         delete node;
     }
 }
+
 
 Node *DAG::addNode(int id, std::string& go) {
     Node* newNode = new Node(id, go);

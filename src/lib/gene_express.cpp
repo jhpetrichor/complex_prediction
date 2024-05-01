@@ -1,4 +1,5 @@
 #include "gene_express.h"
+#include "ungraph.h"
 
 #include <cmath>
 
@@ -9,9 +10,8 @@
 
 GeneExpress::GeneExpress(std::string file_path) {
     read_gene_express(file_path);
-    calculate_message();
-    display();
 }
+
 void GeneExpress::read_gene_express(std::string& file_path) {
     std::fstream file(file_path);
     if(!file.is_open()) {
@@ -33,17 +33,16 @@ void GeneExpress::read_gene_express(std::string& file_path) {
     file.close();
 }
 
-void GeneExpress::calculate_message() {
+std::map<std::string, double> GeneExpress::activate_by_three_sigma() {
+    std::map<std::string, double> result;
     // 计算mean and 。。。
     for(auto& it: gene_express) {
-        std::vector<double> temp_message;
         // update average gene expression
         double temp_sum = 0.0;
         for(auto& express: it.second) {
             temp_sum += express;
         }
         double mean = temp_sum / it.second.size();
-        temp_message.emplace_back(mean);
 
         // update gene expression variance
         double temp_variance = 0.0;
@@ -51,15 +50,100 @@ void GeneExpress::calculate_message() {
             temp_variance += std::pow(express - mean, 2);
         }
         double variance = temp_variance / (it.second.size() - 1);
-        std::cout << "variance: " << variance << std::endl;
-        temp_message.emplace_back(variance);
+        // std::cout << "variance: " << variance << std::endl;
         // update activate threshold
-        message.insert(std::move(std::make_pair(it.first, std::move(temp_message))));
+        double active_threshold = active_three_sigma(mean, variance);
+        result.insert(std::make_pair(it.first, active_threshold));
+    }
+    return std::move(result);
+}
+
+double GeneExpress::active_three_sigma(double mean, double varience) {
+    const double f = 1.0 / (1.0 + varience);
+    const double s_varience = std::pow(varience, 0.5);
+    return mean + 3  * s_varience * (1.0 - f);
+}
+
+
+// need todo()!
+std::map<std::string, double> GeneExpress::active_by_top() {
+    std::map<std::string, double> result;
+    for(auto& it: gene_express) {
+        std::vector<double> temp_expression(it.second.begin(), it.second.end());
+        std::sort(temp_expression.begin(), temp_expression.end());
+        // return temp_expression[10];
+        result.insert(std::make_pair(it.first, temp_expression[12]));
+    }
+
+    // for(auto& it: gene_express) {
+    //     std::cout << it.first << std::endl;
+    //     for(auto value: it.second) {
+    //         std::cout << value << "\t";
+    //     }
+    //     std::cout << std::endl;
+    // }
+    return std::move(result);
+}
+
+std::vector<UnGraph> GeneExpress::build_dynamic_PPI(const UnGraph* g, DPIN_MEHTOD method) {
+    switch(method) {
+        case DPIN_MEHTOD::THREE_SIGMA: {
+            auto active = activate_by_three_sigma();
+            return build_dynamic_PPI_by_active(g, active, 36);
+            break;
+        }
+        case DPIN_MEHTOD::TOP: {
+            auto active = active_by_top();
+            return build_dynamic_PPI_by_active(g, active, 36);
+            break;
+        }
+        case DPIN_MEHTOD::TIME:
+            
+            break;
     }
 }
 
-void GeneExpress::display() const {
-    for(auto& it: message) {
-        printf("%s, mean: %f, variance: %f\n", it.first.c_str(), it.second[0], it.second[1]);
+std::vector<UnGraph> GeneExpress::build_dynamic_PPI_by_active(const UnGraph* g, std::map<std::string, double>& active, int count) {
+    std:vector<UnGraph> dpins(count);
+    // update proteins
+    std::vector<std::set<std::string>> set_proteins(count);
+    std::vector<std::vector<std::string>> list_edges(count);
+    for(auto& protein: g->ID2Protein) {
+        auto it = gene_express.find(protein->protein_name);
+        // 没有这个基因的表达信息，则在所有自网络中保留
+        if(it == gene_express.end()) {
+            for(int i = 0; i < count; ++i) {
+                set_proteins[i].insert(protein->protein_name);
+            }
+            continue;
+        }
+        // 存在基因的表达信息，则需要筛选，满足阈值则保留
+        for(int i = 0; i < count; ++i) {
+            if(it->second[i] > active[it->first]) {
+                set_proteins[i].insert(it->first);
+            }
+         }
     }
+
+    // update edges 
+    for(auto& e: g->edges) {
+        // if(set_proteins.count(e->node_a->protein_name) && set_proteins.count(e->node_b->protein_name)) {
+
+        // }
+        for(int i = 0; i < count; ++i) {
+            if(set_proteins[i].count(e->node_a->protein_name) && set_proteins[i].count(e->node_b->protein_name)) {
+                list_edges[i].emplace_back(e->node_a->protein_name);
+                list_edges[i].emplace_back(e->node_b->protein_name);
+            }
+        }
+    }
+
+    for(int i = 0; i < count; ++i) {
+        UnGraph g(std::move(set_proteins[i]), std::move(list_edges[i]));
+        dpins[i] = std::move(g);
+    }
+}
+
+std::vector<UnGraph> GeneExpress::build_dynamic_PPI_by_time(const UnGraph* g, std::map<std::string, double>& active, int count) {
+    
 }

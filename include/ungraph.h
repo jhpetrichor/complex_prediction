@@ -52,9 +52,20 @@ public:
     std::vector<std::vector<bool>> connected;    // 存储个节点是否直接相连
 
     std::map<std::set<std::string>, int> Edge2ID;
-
+    /**
+     * @description: 从文件中读取文件
+     * @param {string} ppi_file PPI连边文件
+     */    
     explicit UnGraph(string ppi_file);
+    /**
+     * @description: 从节点和连边列表创建图
+     * @param {&&} set_proteins: 蛋白质列表
+     * @param {&&} list_edges: PPI连边列表 每相邻两个蛋白质为一组边 [0, 1] [2, 3]
+     */    
+    UnGraph(std::set<std::string>&& set_proteins, std::vector<std::string>&& list_edges);
+    UnGraph() = default;
     ~UnGraph();
+    void display() const;
     Edge* getEdge(const Protein* protein1, const Protein* protein2);
 
     double agglomeration_coefficient(const vector<Protein*>& nodes);
@@ -102,15 +113,4 @@ struct SubPPI {
 
 //    void remove_edge(Protein* a, Protein* b);
 };
-
-//
-//struct CompareEdgeByVisitedCount{
-//    bool operator()(const Edge*& e1, const Edge*& e2) const {
-//        return e1 < e2;
-//    }
-//};
-
-
-//typedef std::set<Protein*> Complex;
-
 #endif //COMPLEX_PREDICT_UDGRAPH_H
