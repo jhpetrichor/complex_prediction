@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jh
  * @Date: 2024-04-30 17:11:48
- * @LastEditTime: 2024-05-01 21:03:26
+ * @LastEditTime: 2024-05-01 23:00:20
  */
 
 #ifndef __GENE_EXPRESS_H__
@@ -26,6 +26,7 @@ public:
     std::map<std::string, std::vector<double>> gene_express;
 
     explicit GeneExpress(std::string file_path = GENE_EXPRESSION);
+    ~GeneExpress();
     void read_gene_express(std::string& file_path);
     std::map<std::string, double> activate_by_three_sigma();
     std::map<std::string, double> active_by_top();

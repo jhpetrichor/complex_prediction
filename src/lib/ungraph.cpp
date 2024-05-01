@@ -1,6 +1,9 @@
 #include "ungraph.h"
 
+#include <algorithm>
 #include <cassert>
+#include <fstream>
+#include <iterator>
 #include <memory>
 
 Protein::Protein(int idx, std::string _protein_name, double _weight) {
@@ -95,14 +98,6 @@ UnGraph::UnGraph(string ppi_file) {
     std::cout << "edge: " << edges.size() << std::endl;
 }
 
-    // std::vector<Protein*> ID2Protein;
-    // std::map<Protein*, int> Protein2ID;
-    // std::map<std::string, int> protein_name_id;
-    // std::set<Protein*> proteins;
-    // std::vector<Edge*> edges;
-    // std::vector<std::vector<bool>> connected;    // 存储个节点是否直接相连
-
-    // std::map<std::set<std::string>, int> Edge2ID;
 
 UnGraph::UnGraph(std::set<std::string>&& set_proteins, std::vector<std::string>&& list_edges) {
     assert(list_edges.size() % 2 == 0);
@@ -125,7 +120,6 @@ UnGraph::UnGraph(std::set<std::string>&& set_proteins, std::vector<std::string>&
 }
 
 UnGraph::~UnGraph() {
-    // 清空容器
     ID2Protein.clear();
     Protein2ID.clear();
     protein_name_id.clear();
@@ -473,4 +467,27 @@ vector<double> UnGraph::calculate_protein_weight() {
 
 bool UnGraph::compare_pairs(const pair<shared_ptr<Edge>, int>& pair1, const pair<shared_ptr<Edge>, int>& pair2) {
     return pair1.second > pair2.second;
+}
+
+double Complex::complex_match_score(Complex& other) {
+    std::set<shared_ptr<Protein>> common;
+    std::set_intersection(proteins.begin(), proteins.end(),
+                          other.proteins.begin(), other.proteins.end(),
+                          std::inserter(common, common.begin()));
+    return static_cast<double>(common.size()) / static_cast<double>(std::max(other.proteins.size(), proteins.size()));
+}
+
+void Complex::write_complex_to_file(vector<Complex>& complexes, std::string& file_path) {
+    std::ofstream file(file_path);
+    if(!file.is_open()) {
+        std::cerr << "<ERROR>: Failed to open file! " << file_path << std::endl;
+        exit(1);
+    }
+    for(auto& c: complexes) {
+        for(auto& p: c.proteins) {
+            file << p->protein_name << "\t";
+        }
+        file << std::endl;
+    } 
+    file.close();
 }

@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: jh
  * @Date: 2024-04-30 17:11:48
- * @LastEditTime: 2024-05-01 22:49:26
+ * @LastEditTime: 2024-05-01 23:00:41
  */
 #include "gene_express.h"
 #include "ungraph.h"
@@ -16,6 +16,10 @@
 
 GeneExpress::GeneExpress(std::string file_path) {
     read_gene_express(file_path);
+}
+
+GeneExpress::~GeneExpress() {
+    gene_express.clear();
 }
 
 void GeneExpress::read_gene_express(std::string& file_path) {

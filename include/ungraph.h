@@ -108,6 +108,14 @@ private:
     static bool compare_pairs(const pair<std::shared_ptr<Edge>, int>& pair1, const pair<std::shared_ptr<Edge>, int>& pair);
 };
 
+class Complex {
+public:
+    std::vector<shared_ptr<Protein>> proteins;
+
+    double complex_match_score(Complex& other);
+    static void write_complex_to_file(vector<Complex>&, std::string& file_path);
+};
+
 // struct SubPPI {
 //     vector<Protein*> proteins;
 //     vector<Edge*>     edges;    // 边对应的访问次数
